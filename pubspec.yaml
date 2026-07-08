@@ -1,19 +1,11 @@
 name: hardcore
-description: "A new Flutter project."
+description: "LeetCode practice in pure Dart."
 publish_to: 'none'
 version: 0.1.0
 
 environment:
   sdk: ^3.10.3
 
-dependencies:
-  flutter:
-    sdk: flutter
-
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
-  flutter_lints: ^6.0.0
-
-flutter:
-  uses-material-design: true
+  lints: ^5.0.0
+  test: ^1.25.0
