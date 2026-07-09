@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>LeetCode Thumbnail — luci-studio blueprint</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --blue:   #1b56ff;   /* luci-studio blueprint blue  */
+    --orange: #f2542d;   /* luci-studio vermilion        */
+    --orange-ink: #d8431f;/* darker orange for small text */
+    --paper:  #efeee8;   /* warm drafting-sheet cream    */
+    --ink:    #101a29;   /* near-black navy — headlines  */
+    --ink-soft: #545c6a; /* body/secondary text          */
+    --ink-faint:#9aa1ac; /* mono annotations             */
+    --line:   rgba(16,26,41,0.08);  /* grid + rules      */
+    --diff:   #1a8f52;   /* set from CONFIG difficulty    */
+  }
+
+  html, body { background: var(--paper); }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: "Space Grotesk", system-ui, sans-serif;
+  }
+
+  /* Screenshot THIS element at 1280x720 for a crisp YouTube thumbnail.
+     Inner sizes use cqw (1cqw = 1% card width) so it stays pixel-proportional. */
+  .card {
+    container-type: inline-size;
+    width: 1280px;
+    height: 720px;
+    flex-shrink: 0;      /* never let a narrow window shrink the card — keeps screenshots exactly 1280x720 */
+    position: relative;
+    overflow: hidden;
+    background: var(--paper);
+    color: var(--ink);
+  }
+
+  /* drafting grid */
+  .card::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(var(--line) 0.1cqw, transparent 0.1cqw),
+      linear-gradient(90deg, var(--line) 0.1cqw, transparent 0.1cqw);
+    background-size: 3.2cqw 3.2cqw;
+  }
+  /* sheet frame */
+  .card::after {
+    content: "";
+    position: absolute; inset: 2.3cqw;
+    border: 0.1cqw solid rgba(16,26,41,0.14);
+    pointer-events: none;
+  }
+
+  /* corner registration ticks */
+  .tick { position: absolute; width: 2.2cqw; height: 2.2cqw; z-index: 3; }
+  .tick::before, .tick::after { content: ""; position: absolute; background: var(--blue); }
+  .tick::before { width: 100%; height: 0.14cqw; top: 0; }
+  .tick::after  { height: 100%; width: 0.14cqw; left: 0; }
+  .tick.tl { top: 2.9cqw; left: 2.9cqw; }
+  .tick.tr { top: 2.9cqw; right: 2.9cqw; transform: scaleX(-1); }
+  .tick.bl { bottom: 2.9cqw; left: 2.9cqw; transform: scaleY(-1); }
+  .tick.br { bottom: 2.9cqw; right: 2.9cqw; transform: scale(-1); }
+
+  .inner {
+    position: relative; z-index: 2;
+    height: 100%;
+    padding: 6.2cqw 6.4cqw;
+    display: grid;
+    grid-template-columns: 1.14fr 0.86fr;
+    gap: 3.8cqw;
+    align-items: center;
+  }
+
+  /* ---------- left column ---------- */
+  .left { display: flex; flex-direction: column; gap: 1.9cqw; }
+
+  .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 1.5cqw; font-weight: 600; letter-spacing: 0.24em;
+    color: var(--blue);
+    display: flex; align-items: center; gap: 0.9cqw;
+  }
+  .eyebrow .sq { width: 1.15cqw; height: 1.15cqw; background: var(--orange); }
+  .eyebrow .sep { color: var(--ink-faint); }
+  .eyebrow .coord { color: var(--ink-faint); }
+
+  .title {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 8.6cqw;          /* CONFIG.titleSize overrides for long titles */
+    line-height: 0.9;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    text-wrap: balance;
+    color: var(--ink);
+  }
+  .title .tdot { color: var(--blue); }
+
+  /* dimension line: |— Δ text · REV —|———— */
+  .dimline {
+    display: flex; align-items: center; gap: 1cqw;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 1.4cqw; font-weight: 500; letter-spacing: 0.06em;
+    color: var(--ink-faint);
+  }
+  .dimline .cap { width: 0.12cqw; height: 1.9cqw; background: rgba(16,26,41,0.28); flex-shrink: 0; }
+  .dimline .rule { flex: 1; height: 0.12cqw; background: rgba(16,26,41,0.18); }
+  .dimline b { color: var(--ink-soft); font-weight: 600; }
+
+  .meta { display: flex; align-items: center; gap: 2.2cqw; margin-top: 0.3cqw; }
+  .m {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 1.75cqw; font-weight: 600; letter-spacing: 0.03em;
+    display: inline-flex; align-items: center; gap: 0.7cqw;
+  }
+  .m-diff { color: var(--diff); }
+  .m-diff .sq { width: 1.2cqw; height: 1.2cqw; background: var(--diff); }
+  .m-lang { color: var(--ink); border-bottom: 0.2cqw solid var(--blue); padding-bottom: 0.2cqw; }
+  .m-lang .mark { color: var(--blue); }
+  .m-beats { color: var(--orange-ink); border-bottom: 0.2cqw solid var(--orange); padding-bottom: 0.2cqw; }
+
+  /* ---------- right column: drafting schematic ---------- */
+  .right { position: relative; }
+  .schematic {
+    position: relative;
+    border: 0.12cqw solid rgba(16,26,41,0.20);
+    padding: 3.1cqw 2.6cqw 2.6cqw;
+    background: rgba(255,255,255,0.35);
+  }
+  .fig {
+    position: absolute; top: -1cqw; left: 1.5cqw;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 1.3cqw; font-weight: 600; letter-spacing: 0.12em;
+    color: var(--blue); background: var(--paper); padding: 0 0.8cqw;
+  }
+  .nlabel {
+    position: absolute; top: -1cqw; right: 1.5cqw;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 1.3cqw; font-weight: 600; letter-spacing: 0.06em;
+    color: var(--ink-faint); background: var(--paper); padding: 0 0.8cqw;
+  }
+  .sch-cap {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 1.5cqw; color: var(--ink-soft); margin-bottom: 1.5cqw; letter-spacing: 0.02em;
+  }
+  .sch-cap b { color: var(--orange-ink); font-weight: 700; }
+
+  .array { display: grid; gap: 0.9cqw; }
+  .row-ptrs, .row-boxes, .row-idx { display: grid; gap: 1.05cqw; }
+  .box {
+    aspect-ratio: 1 / 1;
+    display: flex; align-items: center; justify-content: center;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 3.3cqw; font-weight: 600;
+    position: relative;
+  }
+  .box.keep {
+    background: rgba(27,86,255,0.08);
+    border: 0.24cqw solid var(--blue);
+    color: var(--ink);
+  }
+  .box.drop {
+    background: rgba(242,84,45,0.09);
+    border: 0.24cqw solid var(--orange);
+    color: var(--orange-ink);
+  }
+  .box.drop::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(-22deg,
+      transparent calc(50% - 0.19cqw),
+      var(--orange) calc(50% - 0.19cqw),
+      var(--orange) calc(50% + 0.19cqw),
+      transparent calc(50% + 0.19cqw));
+    opacity: 0.85;
+  }
+  .idx {
+    text-align: center;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 1.3cqw; color: var(--ink-faint);
+  }
+  .ptr {
+    display: flex; flex-direction: column; align-items: center;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-weight: 700; font-size: 1.85cqw; line-height: 1;
+  }
+  .ptr .arrow { font-size: 1.65cqw; }
+  .ptr.i { color: var(--blue); }
+  .ptr.j { color: var(--orange-ink); }
+
+  .sch-note {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 1.3cqw; color: var(--ink-faint); letter-spacing: 0.03em;
+    margin-top: 1.5cqw; display: flex; align-items: center; gap: 0.8cqw;
+  }
+  .sch-note::before { content: "▸"; color: var(--blue); }
+
+  /* ---------- brand lockup (real logo asset, embedded as data URI) ---------- */
+  .brand {
+    position: absolute; z-index: 3;
+    right: 4.2cqw; bottom: 3.1cqw;
+    display: flex; align-items: center; gap: 1cqw;
+    white-space: nowrap;
+  }
+  .brand .mark { width: 2.9cqw; height: 2.9cqw; border-radius: 0.7cqw; display: block; }
+  .brand .wm {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.75cqw; font-weight: 700; letter-spacing: 0.005em;
+    color: var(--ink);
+  }
+  .brand .wm::after { content: "."; color: var(--blue); }
+</style>
+</head>
+<body>
+  <div class="card" id="card">
+    <span class="tick tl"></span><span class="tick tr"></span>
+    <span class="tick bl"></span><span class="tick br"></span>
+
+    <div class="inner">
+      <div class="left">
+        <div class="eyebrow">
+          <span class="sq"></span>
+          <span>LEETCODE</span><span class="sep">·</span><span class="num" id="num">#27</span>
+          <span class="sep">·</span><span class="coord" id="coord">N 10°49'</span>
+        </div>
+
+        <h1 class="title"><span id="title">Remove Element</span><span class="tdot">.</span></h1>
+
+        <div class="dimline">
+          <span class="cap"></span>
+          <span id="dim">Δ nums[4] · REMOVE val=3 · REV 1.0</span>
+          <span class="cap"></span>
+          <span class="rule"></span>
+        </div>
+
+        <div class="meta">
+          <span class="m m-diff" id="diffLabel"><span class="sq"></span><span id="diffText">EASY</span></span>
+          <span class="m m-lang"><span class="mark">&lt;/&gt;</span><span id="lang">Dart</span></span>
+          <span class="m m-beats" id="beats">⚡ Beats 100%</span>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="schematic">
+          <span class="fig" id="fig">FIG.01 — TWO POINTERS</span>
+          <span class="nlabel" id="nlabel">n = 4</span>
+          <div class="sch-cap"><span id="arrName">nums</span> &nbsp;·&nbsp; remove val = <b id="valLabel">3</b></div>
+          <div class="array" id="array"></div>
+          <div class="sch-note" id="note">O(n) time · O(1) space</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="brand"><img class="mark" src="data:image/png;base64,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" alt="Luci Studio" /><span class="wm" id="brandText">luci studio</span></div>
+  </div>
+
+<script>
+  /* =======================================================================
+     EDIT THIS BLOCK FOR EACH NEW VIDEO, then screenshot the .card element.
+     ======================================================================= */
+  const CONFIG = {
+    number:       "27",
+    title:        "Remove Element",
+    difficulty:   "EASY",              // EASY | MEDIUM | HARD  (color auto-set)
+    language:     "Dart",
+    coord:        "N 10°49'",          // studio geo-tag (kept from the site DNA)
+
+    beats:        "100%",              // "⚡ Beats <beats>"; set "" to hide
+    complexity:   "O(n) time · O(1) space",
+    dimline:      "Δ nums[4] · REMOVE val=3 · REV 1.0",  // drafting dimension caption
+
+    // schematic
+    figLabel:     "FIG.01 — TWO POINTERS",
+    arrName:      "nums",
+    array:        [3, 2, 2, 3],
+    removeVal:    3,                   // boxes equal to this are marked "remove"
+    iIndex:       3,                   // read pointer  (0-based, -1 to hide)
+    jIndex:       2,                   // write pointer (0-based, -1 to hide)
+
+    brand:        "luci studio",  // corner wordmark (logo badge embedded as data URI)
+    titleSize:    "",                  // e.g. "6.6cqw" for long titles; "" = default 8.6cqw
+  };
+  /* ===================================================================== */
+
+  /* LeetCode difficulty colours — the one deliberate exception to the
+     blue+orange brand palette (semantic convention viewers expect),
+     darkened for AA contrast on the cream sheet. */
+  const DIFF_COLORS = { EASY: "#1a8f52", MEDIUM: "#b3730a", HARD: "#d43a2f" };
+
+  function render(cfg) {
+    document.documentElement.style.setProperty(
+      "--diff", DIFF_COLORS[cfg.difficulty] || DIFF_COLORS.EASY);
+
+    document.getElementById("num").textContent = "#" + cfg.number;
+    document.getElementById("coord").textContent = cfg.coord;
+    document.getElementById("title").textContent = cfg.title;
+    document.getElementById("diffText").textContent = cfg.difficulty;
+    document.getElementById("lang").textContent = cfg.language;
+    document.getElementById("dim").textContent = cfg.dimline;
+    document.getElementById("note").textContent = cfg.complexity;
+    document.getElementById("fig").textContent = cfg.figLabel;
+    document.getElementById("nlabel").textContent = "n = " + cfg.array.length;
+    document.getElementById("arrName").textContent = cfg.arrName;
+    document.getElementById("valLabel").textContent = cfg.removeVal;
+    document.getElementById("brandText").textContent = cfg.brand;
+
+    if (cfg.titleSize) document.getElementById("title").parentElement.style.fontSize = cfg.titleSize;
+
+    const beats = document.getElementById("beats");
+    if (cfg.beats) beats.textContent = "⚡ Beats " + cfg.beats;
+    else beats.style.display = "none";
+
+    const n = cfg.array.length;
+    const cols = "repeat(" + n + ", 1fr)";
+
+    const ptrs = document.createElement("div");
+    ptrs.className = "row-ptrs";
+    ptrs.style.gridTemplateColumns = cols;
+
+    const boxes = document.createElement("div");
+    boxes.className = "row-boxes";
+    boxes.style.gridTemplateColumns = cols;
+
+    const idxRow = document.createElement("div");
+    idxRow.className = "row-idx";
+    idxRow.style.gridTemplateColumns = cols;
+
+    cfg.array.forEach((v, idx) => {
+      const b = document.createElement("div");
+      b.className = "box " + (v === cfg.removeVal ? "drop" : "keep");
+      b.textContent = v;
+      boxes.appendChild(b);
+
+      const p = document.createElement("div");
+      if (idx === cfg.iIndex || idx === cfg.jIndex) {
+        const labels = [];
+        if (idx === cfg.jIndex) labels.push('<span class="ptr j"><span class="arrow">&#9650;</span>j</span>');
+        if (idx === cfg.iIndex) labels.push('<span class="ptr i"><span class="arrow">&#9650;</span>i</span>');
+        p.style.display = "flex";
+        p.style.justifyContent = "center";
+        p.style.gap = "0.8cqw";
+        p.innerHTML = labels.join("");
+      }
+      ptrs.appendChild(p);
+
+      const ix = document.createElement("div");
+      ix.className = "idx";
+      ix.textContent = idx;
+      idxRow.appendChild(ix);
+    });
+
+    const arr = document.getElementById("array");
+    arr.innerHTML = "";
+    arr.appendChild(ptrs);
+    arr.appendChild(boxes);
+    arr.appendChild(idxRow);
+  }
+
+  render(CONFIG);
+</script>
+</body>
+</html>
