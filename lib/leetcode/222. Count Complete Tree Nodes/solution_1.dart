@@ -1,5 +1,4 @@
-// Definition for a binary tree node.
-import 'dart:math';
+//  * Definition for a binary tree node.
 
 class TreeNode {
   int val;
@@ -12,22 +11,27 @@ class Solution {
   int countNodes(TreeNode? root) {
     if (root == null) return 0;
 
-    int leftH = 0;
-    TreeNode? leftNode = root;
-    while (leftNode != null) {
-      leftH++;
-      leftNode = leftNode.left;
+    // total nodes = 2^h - 1
+
+    int leftCount = 0;
+    TreeNode? left = root;
+
+    while (left != null) {
+      leftCount++;
+      left = left.left;
     }
 
-    int rightH = 0;
-    TreeNode? rightNode = root;
-    while (rightNode != null) {
-      rightH++;
-      rightNode = rightNode.right;
+    int rightCount = 0;
+    TreeNode? right = root;
+
+    while (right != null) {
+      rightCount++;
+      right = right.right;
     }
 
-    if (leftH == rightH) {
-      return pow(2, leftH).toInt() - 1;
+    if (leftCount == rightCount) {
+      // full tree
+      return (1 << leftCount) - 1;
     }
 
     return 1 + countNodes(root.left) + countNodes(root.right);
