@@ -14,7 +14,7 @@ class Solution {
 
       // how to cutoff the list, cut on left or right?
       // cuz the list is sorted on [non decs order]
-      // if the sum > target => we have to decease the sum
+      // if the sum > target => we have to decrease the sum
       //     => move right index
       // otherwise => move left index
 
