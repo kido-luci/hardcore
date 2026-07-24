@@ -34,4 +34,4 @@ than a plain sliding window.
 
 | File | Approach | Complexity |
 |---|---|---|
-| `solution_1.dart` | Two pointers from both ends; at each step record `min(height) * width`, then move the shorter side inward | O(n) time · O(1) space |
+| `solution.dart` | Two pointers from both ends; at each step record `min(height) * width`, then move the shorter side inward | O(n) time · O(1) space |
