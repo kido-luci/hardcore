@@ -10,7 +10,7 @@ Linked List · Recursion
 
 ## Four-axis rating
 
-Per `tools/RUBRIC.md`. This series' own scale, not LeetCode's.
+Per `RUBRIC.md` in the private leetcode-video-toolkit repo. This series' own scale, not LeetCode's.
 
 | Axis | Score | Reason |
 |---|---|---|
