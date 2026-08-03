@@ -1,25 +1,24 @@
 # hardcore
 
 Personal repo for practicing algorithms, data structures, and LeetCode
-problems in Dart / Flutter.
+problems in pure Dart.
 
 ## Structure
 
+- `lib/leetcode/resolved/` — problems that have a working solution
+- `lib/leetcode/template/` — the empty folder a new problem is copied from
 - `lib/model/` — reusable data structures (e.g. `ListNode` linked list)
-- `lib/leetcode/` — solutions, one folder per problem. Each folder holds:
-  - `problem.md` — the problem statement
-  - `solution_1.dart` — a solution
-  - `execute.dart` — a runnable entry point with test cases
-- `lib/main.dart` — Flutter app entry point
 
-## Running a solution
+One folder per problem, named `<number>. <LeetCode title>`:
 
-Run a problem's `execute.dart` directly from the project root:
+- `problem.md` — the problem title and its LeetCode link
+- `solution_1.dart`, `solution_2.dart`, … — one file per approach
+- `README.md` — four-axis rating, plus what separates the approaches
 
-```bash
-dart run lib/leetcode/Merge_Two_Sorted_Lists/execute.dart
-```
+A new problem starts as a folder directly under `lib/leetcode/` and moves into
+`resolved/` once `solution_1.dart` holds a real solution and `README.md` is
+written.
 
 ## Requirements
 
-- Dart / Flutter SDK `^3.10.3`
+- Dart SDK `^3.10.3`
