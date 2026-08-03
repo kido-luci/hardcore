@@ -1,1 +1,9 @@
 include: package:lints/recommended.yaml
+
+linter:
+  rules:
+    # Algorithm code reads better with snake_case for the counter/index arrays
+    # it carries (t_counters, s_take, start_window) than with lowerCamelCase.
+    # Off by choice, so that `dart analyze` reporting nothing means something.
+    non_constant_identifier_names: false
+
