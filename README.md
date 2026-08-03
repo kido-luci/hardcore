@@ -15,9 +15,9 @@ One folder per problem, named `<number>. <LeetCode title>`:
 - `solution_1.dart`, `solution_2.dart`, … — one file per approach
 - `README.md` — four-axis rating, plus what separates the approaches
 
-A new problem starts as a folder directly under `lib/leetcode/` and moves into
-`resolved/` once `solution_1.dart` holds a real solution and `README.md` is
-written.
+A problem folder is committed only once it is finished — `solution_1.dart`
+holds a real solution and `README.md` is written. Work in progress stays local
+and untracked, so everything under `resolved/` can be trusted to be solved.
 
 ## Requirements
 
