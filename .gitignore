@@ -26,6 +26,9 @@ migrate_working_dir/
 # Claude Code agent-local config
 .claude/
 
+# Queue of problems scaffolded but not solved yet — stays on the machine
+/lib/scaffold/
+
 # Flutter/Dart/Pub related
 **/doc/api/
 **/ios/Flutter/.last_build_id
