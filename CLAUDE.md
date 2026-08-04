@@ -1,12 +1,19 @@
 # hardcore — project rules
 
-## `lib/leetcode/<number>. <title>/` is a published URL — never nest it
+## A problem folder is a published URL — never nest or rename a shipped one
 
 Every YouTube episode that has already gone out links to its solution file at
-`https://github.com/kido-luci/hardcore/blob/main/lib/leetcode/<number>.%20<title>/<file>`.
+`https://github.com/kido-luci/hardcore/blob/main/lib/leetcode/<folder>/<file>`.
 GitHub does not redirect a moved path, so introducing any directory between
-`lib/leetcode/` and a problem folder turns every one of those links into a 404 —
-silently, permanently, and invisibly from inside the repo.
+`lib/leetcode/` and a problem folder — or renaming a folder an episode already
+links to — turns every one of those links into a 404, silently, permanently,
+and invisibly from inside the repo.
+
+Naming (changed 2026-08-04, starting at problem 76): new problem folders are
+**kebab-case** — `<number>-<kebab-title>`, e.g. `76-minimum-window-substring` —
+so code links need no `%20` encoding. Folders created before then keep their
+`<number>. <Title>` spaced names FOREVER: they are published addresses, and the
+ugliness of `%20` in an old link is cheaper than the 404 a rename would buy.
 
 A problem folder therefore sits **directly** under `lib/leetcode/`. Do not group
 them by status, topic, difficulty, or anything else, however tidy the result
