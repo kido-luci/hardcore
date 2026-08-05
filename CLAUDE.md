@@ -9,11 +9,21 @@ GitHub does not redirect a moved path, so introducing any directory between
 links to — turns every one of those links into a 404, silently, permanently,
 and invisibly from inside the repo.
 
-Naming (changed 2026-08-04, starting at problem 76): new problem folders are
-**kebab-case** — `<number>-<kebab-title>`, e.g. `76-minimum-window-substring` —
-so code links need no `%20` encoding. Folders created before then keep their
-`<number>. <Title>` spaced names FOREVER: they are published addresses, and the
-ugliness of `%20` in an old link is cheaper than the 404 a rename would buy.
+Naming (changed 2026-08-04): problem folders are **kebab-case** —
+`<number>-<kebab-title>`, e.g. `76-minimum-window-substring` — so code links
+need no `%20` encoding. The `<number>. <Title>` spaced folders are what is left
+from before that date; the ones an episode already links to keep those names
+FOREVER, because the ugliness of `%20` in an old link is cheaper than the 404 a
+rename would buy.
+
+What freezes a name is that **an episode has already published a link to it** —
+not the problem number, and not the date the folder was created. A spaced folder
+nothing links to yet may still be renamed to kebab-case, and should be, before
+its episode's description is written; that is how `20. Valid Parentheses` became
+`20-valid-parentheses` (2026-08-05), and why `15-3sum` was born kebab despite
+its low number. Renaming one is still a change that needs its own explicit yes,
+because the check — has an episode shipped this link? — cannot be run from
+inside the repo.
 
 A problem folder therefore sits **directly** under `lib/leetcode/`. Do not group
 them by status, topic, difficulty, or anything else, however tidy the result
