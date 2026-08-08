@@ -29,6 +29,9 @@ migrate_working_dir/
 # Queue of problems scaffolded but not solved yet — stays on the machine
 /lib/scaffold/
 
+# Shortlist pulled out of the scaffold queue, next to be solved — also local only
+/lib/pickup/
+
 # Flutter/Dart/Pub related
 **/doc/api/
 **/ios/Flutter/.last_build_id
