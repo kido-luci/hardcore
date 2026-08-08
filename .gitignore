@@ -29,6 +29,15 @@ migrate_working_dir/
 # Queue of problems scaffolded but not solved yet — stays on the machine
 /lib/scaffold/
 
+# Shortlist pulled out of the scaffold queue, next to be solved — also local only
+/lib/pickup/
+
+# Solved on LeetCode, no episode decided yet — moves to lib/leetcode/ only if filmed
+/lib/solved/
+
+# LeetCode ships no Dart snippet for these, so they cannot be attempted
+/lib/no-dart/
+
 # Flutter/Dart/Pub related
 **/doc/api/
 **/ios/Flutter/.last_build_id
