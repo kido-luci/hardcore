@@ -32,6 +32,9 @@ migrate_working_dir/
 # Shortlist pulled out of the scaffold queue, next to be solved — also local only
 /lib/pickup/
 
+# Pulled out of pickup and not solved yet
+/lib/pending/
+
 # Solved on LeetCode, no episode decided yet — moves to lib/leetcode/ only if filmed
 /lib/solved/
 
