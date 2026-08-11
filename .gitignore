@@ -41,6 +41,9 @@ migrate_working_dir/
 # LeetCode ships no Dart snippet for these, so they cannot be attempted
 /lib/no-dart/
 
+# Local helper that type-checks the Go snippets — machine-side, like the queues
+/tool/
+
 # Flutter/Dart/Pub related
 **/doc/api/
 **/ios/Flutter/.last_build_id
