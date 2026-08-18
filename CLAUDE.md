@@ -28,8 +28,21 @@ inside the repo.
 A problem folder therefore sits **directly** under `lib/leetcode/`. Do not group
 them by status, topic, difficulty, or anything else, however tidy the result
 looks. The only subdirectory that belongs there is `template/`, which no link
-points into. The local, untracked `scaffold/` queue lives outside, at
-`lib/scaffold/`.
+points into. The queues of problems that are *not* solved yet stay outside and
+untracked: `lib/scaffold/` (the warehouse of problems intended to be done),
+`lib/pickup/` (the batch being worked right now), `lib/pending/` (pulled out of
+pickup and parked), and `lib/no-dart/` (LeetCode ships no Dart snippet for
+these, so they cannot be attempted).
+
+**`lib/leetcode/` means solved, not filmed (changed 2026-08-18).** It used to
+hold only the problems an episode had been made for, while everything else
+waited in an ignored `lib/solved/` queue. Since not every solved problem becomes
+an episode, that gate kept finished work out of the repo indefinitely, so
+`lib/solved/` was dropped and its 73 folders moved in. Nothing in the rule above
+softens as a result — it hardens. A folder's presence here used to imply that an
+episode existed; now it implies nothing at all, so "has an episode already
+shipped this link?" can never be answered by looking at the repo, and has to be
+asked every single time.
 
 **Why:** 2026-08-04 — a reorganisation moved all 21 solved problems into
 `lib/leetcode/resolved/` and shipped. A `grep` for references found none, because
@@ -49,8 +62,9 @@ Claude must not change what any of them does.
   Explanatory prose only.
 - **`README.md`** for a problem — the four-axis write-up, scored against the
   anchor table in `RUBRIC.md` (private `leetcode-video-toolkit` repo).
-- **Moving a folder** out of the local `lib/scaffold/` queue into
-  `lib/leetcode/` when a problem is finished.
+- **Moving a folder** out of a local queue (`lib/scaffold/`, `lib/pickup/`,
+  `lib/pending/`) into `lib/leetcode/` once the problem is solved — solved on
+  LeetCode is enough, an episode is not required.
 - **Scaffolding** a new problem folder: `problem.md` holding the title and the
   LeetCode link, plus `solution_1.dart` holding `class Solution {}`.
 
