@@ -177,3 +177,51 @@ void main() {
   print('-> true');
   print(Solution().isMatch("c", "*?*"));
 }
+
+// void main() {
+//   print(Solution().isMatch("acdcb", "a*c?b")); //false
+//   print(Solution().isMatch("adceb", "*a*b")); //true
+//   print(Solution().isMatch("", "******")); // true
+//   print(
+//     Solution().isMatch(
+//       "aaabbbaabaaaaababaabaaabbabbbbbbbbaabababbabbbaaaaba",
+//       "*a*******b*",
+//     ),
+//   ); // false
+// }
+
+// Time Limit Exceeded
+
+// 1710 / 1812
+// class Solution {
+//   bool isMatch(String s, String p) {
+//     // print((s, p));
+
+//     if (p.isEmpty) return s.isEmpty;
+
+//     if (p[0] == '*') {
+//       var operator = '';
+
+//       for (var i = 1; i < p.length; i++) {
+//         if (p[i] != '*') {
+//           operator = p.substring(i);
+//           break;
+//         }
+//       }
+
+//       if (operator.isEmpty) return true;
+
+//       for (var i = 0; i <= s.length; i++) {
+//         if (isMatch(s.substring(i), operator)) return true;
+//       }
+
+//       return false;
+//     }
+
+//     if (s.isEmpty) return p[0] == '*';
+
+//     if (p[0] != '?' && p[0] != s[0]) return false;
+
+//     return isMatch(s.substring(1), p.substring(1));
+//   }
+// }
