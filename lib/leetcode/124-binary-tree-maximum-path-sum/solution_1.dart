@@ -1,11 +1,6 @@
 import 'dart:math';
 
-class TreeNode {
-  int val;
-  TreeNode? left;
-  TreeNode? right;
-  TreeNode([this.val = 0, this.left, this.right]);
-}
+import 'package:hardcore/model/binary_tree.dart';
 
 // 1344
 // ms
