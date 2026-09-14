@@ -37,4 +37,33 @@ class TreeNode {
 
     return root;
   }
+
+  /// Renders the tree in the LeetCode level-order format, `null` marking a
+  /// missing child, trailing `null`s trimmed off.
+  @override
+  String toString() {
+    final values = <String>[];
+    final queue = <TreeNode?>[this];
+
+    var head = 0;
+
+    while (head < queue.length) {
+      final current = queue[head++];
+
+      if (current == null) {
+        values.add('null');
+        continue;
+      }
+
+      values.add('${current.val}');
+      queue.add(current.left);
+      queue.add(current.right);
+    }
+
+    while (values.last == 'null') {
+      values.removeLast();
+    }
+
+    return '[${values.join(',')}]';
+  }
 }
