@@ -1,4 +1,8 @@
 analyzer:
+  # Symlinks back into lib/leetcode/, grouped by topic. Analysing them would
+  # report every solution twice.
+  exclude:
+    - lib/leetcode-mapping/**
   errors:
     constant_identifier_names: ignore
     curly_braces_in_flow_control_structures: ignore
