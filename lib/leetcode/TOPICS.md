@@ -3,7 +3,7 @@
 Each solved problem sits directly under `lib/leetcode/`. Folders are never grouped on disk, because published episodes link to those paths.
 This page is the grouped view instead: every problem appears once, under the main technique its kept solution actually uses.
 
-296 problems.
+303 problems.
 
 - [Array & hashing](#array--hashing) — 55
 - [String](#string) — 14
@@ -17,7 +17,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [Linked list](#linked-list) — 10
 - [Binary tree](#binary-tree) — 49
 - [Binary search tree](#binary-search-tree) — 10
-- [Grid BFS/DFS](#grid-bfsdfs) — 14
+- [Grid BFS/DFS](#grid-bfsdfs) — 19
 - [Graph](#graph) — 5
 - [Greedy](#greedy) — 6
 - [Dynamic programming](#dynamic-programming) — 17
@@ -25,7 +25,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [Bit manipulation](#bit-manipulation) — 4
 - [Math](#math) — 36
 - [Simulation](#simulation) — 11
-- [Matrix](#matrix) — 4
+- [Matrix](#matrix) — 6
 - [Design](#design) — 5
 
 ## Array & hashing
@@ -264,15 +264,20 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [542. 01 Matrix](542-01-matrix/)
 - [695. Max Area of Island](695-max-area-of-island/)
 - [733. Flood Fill](733-flood-fill/)
+- [749. Contain Virus](749-contain-virus/)
 - [827. Making A Large Island](827-making-a-large-island/)
 - [934. Shortest Bridge](934-shortest-bridge/)
 - [994. Rotting Oranges](994-rotting-oranges/)
 - [1020. Number of Enclaves](1020-number-of-enclaves/)
+- [1034. Coloring A Border](1034-coloring-a-border/)
 - [1091. Shortest Path in Binary Matrix](1091-shortest-path-in-binary-matrix/)
 - [1162. As Far from Land as Possible](1162-as-far-from-land-as-possible/)
 - [1254. Number of Closed Islands](1254-number-of-closed-islands/)
+- [1293. Shortest Path in a Grid with Obstacles Elimination](1293-shortest-path-in-a-grid-with-obstacles-elimination/)
 - [1765. Map of Highest Peak](1765-map-of-highest-peak/)
+- [1905. Count Sub Islands](1905-count-sub-islands/)
 - [1926. Nearest Exit from Entrance in Maze](1926-nearest-exit-from-entrance-in-maze/)
+- [3286. Find a Safe Walk Through a Grid](3286-find-a-safe-walk-through-a-grid/)
 
 ## Graph
 
@@ -378,7 +383,9 @@ This page is the grouped view instead: every problem appears once, under the mai
 ## Matrix
 
 - [36. Valid Sudoku](36-valid-sudoku/)
+- [419. Battleships in a Board](419-battleships-in-a-board/)
 - [463. Island Perimeter](463-island-perimeter/)
+- [1267. Count Servers that Communicate](1267-count-servers-that-communicate/)
 - [1275. Find Winner on a Tic Tac Toe Game](1275-find-winner-on-a-tic-tac-toe-game/)
 - [2022. Convert 1D Array Into 2D Array](2022-convert-1d-array-into-2d-array/)
 
