@@ -3,29 +3,29 @@
 Each solved problem sits directly under `lib/leetcode/`. Folders are never grouped on disk, because published episodes link to those paths.
 This page is the grouped view instead: every problem appears once, under the main technique its kept solution actually uses.
 
-310 problems.
+317 problems.
 
 - [Array & hashing](#array--hashing) — 57
-- [String](#string) — 14
+- [String](#string) — 17
 - [Two pointers](#two-pointers) — 23
 - [Sliding window](#sliding-window) — 9
 - [Prefix sum](#prefix-sum) — 6
 - [Binary search](#binary-search) — 9
 - [Sorting](#sorting) — 8
-- [Stack](#stack) — 3
+- [Stack](#stack) — 4
 - [Monotonic stack](#monotonic-stack) — 1
 - [Linked list](#linked-list) — 10
 - [Binary tree](#binary-tree) — 49
 - [Binary search tree](#binary-search-tree) — 10
 - [Grid BFS/DFS](#grid-bfsdfs) — 20
 - [Graph](#graph) — 5
-- [Greedy](#greedy) — 6
+- [Greedy](#greedy) — 8
 - [Dynamic programming](#dynamic-programming) — 17
 - [Backtracking](#backtracking) — 1
 - [Bit manipulation](#bit-manipulation) — 4
 - [Math](#math) — 36
 - [Simulation](#simulation) — 11
-- [Matrix](#matrix) — 6
+- [Matrix](#matrix) — 7
 - [Design](#design) — 5
 
 ## Array & hashing
@@ -94,6 +94,9 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [434. Number of Segments in a String](434-number-of-segments-in-a-string/)
 - [482. License Key Formatting](482-license-key-formatting/)
 - [520. Detect Capital](520-detect-capital/)
+- [521. Longest Uncommon Subsequence I](521-longest-uncommon-subsequence-i/)
+- [551. Student Attendance Record I](551-student-attendance-record-i/)
+- [557. Reverse Words in a String III](557-reverse-words-in-a-string-iii/)
 - [709. To Lower Case](709-to-lower-case/)
 - [1021. Remove Outermost Parentheses](1021-remove-outermost-parentheses/)
 - [1816. Truncate Sentence](1816-truncate-sentence/)
@@ -179,6 +182,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 
 - [20. Valid Parentheses](20-valid-parentheses/)
 - [682. Baseball Game](682-baseball-game/)
+- [735. Asteroid Collision](735-asteroid-collision/)
 - [1047. Remove All Adjacent Duplicates In String](1047-remove-all-adjacent-duplicates-in-string/)
 
 ## Monotonic stack
@@ -298,8 +302,10 @@ This page is the grouped view instead: every problem appears once, under the mai
 
 - [122. Best Time to Buy and Sell Stock II](122-best-time-to-buy-and-sell-stock-ii/)
 - [455. Assign Cookies](455-assign-cookies/)
+- [605. Can Place Flowers](605-can-place-flowers/)
 - [1221. Split a String in Balanced Strings](1221-split-a-string-in-balanced-strings/)
 - [1323. Maximum 69 Number](1323-maximum-69-number/)
+- [2126. Destroying Asteroids](2126-destroying-asteroids/)
 - [2160. Minimum Sum of Four Digit Number After Splitting Digits](2160-minimum-sum-of-four-digit-number-after-splitting-digits/)
 - [2578. Split With Minimum Sum](2578-split-with-minimum-sum/)
 
@@ -392,6 +398,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [36. Valid Sudoku](36-valid-sudoku/)
 - [419. Battleships in a Board](419-battleships-in-a-board/)
 - [463. Island Perimeter](463-island-perimeter/)
+- [566. Reshape the Matrix](566-reshape-the-matrix/)
 - [1267. Count Servers that Communicate](1267-count-servers-that-communicate/)
 - [1275. Find Winner on a Tic Tac Toe Game](1275-find-winner-on-a-tic-tac-toe-game/)
 - [2022. Convert 1D Array Into 2D Array](2022-convert-1d-array-into-2d-array/)
