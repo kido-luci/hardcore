@@ -3,7 +3,7 @@
 Each solved problem sits directly under `lib/leetcode/`. Folders are never grouped on disk, because published episodes link to those paths.
 This page is the grouped view instead: every problem appears once, under the main technique its kept solution actually uses.
 
-317 problems.
+325 problems.
 
 - [Array & hashing](#array--hashing) — 57
 - [String](#string) — 17
@@ -11,14 +11,15 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [Sliding window](#sliding-window) — 9
 - [Prefix sum](#prefix-sum) — 6
 - [Binary search](#binary-search) — 9
-- [Sorting](#sorting) — 8
-- [Stack](#stack) — 4
-- [Monotonic stack](#monotonic-stack) — 1
+- [Sorting](#sorting) — 9
+- [Stack](#stack) — 6
+- [Monotonic stack](#monotonic-stack) — 2
 - [Linked list](#linked-list) — 10
 - [Binary tree](#binary-tree) — 49
 - [Binary search tree](#binary-search-tree) — 10
 - [Grid BFS/DFS](#grid-bfsdfs) — 20
 - [Graph](#graph) — 5
+- [Heap](#heap) — 4
 - [Greedy](#greedy) — 8
 - [Dynamic programming](#dynamic-programming) — 17
 - [Backtracking](#backtracking) — 1
@@ -173,6 +174,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [75. Sort Colors](75-sort-colors/)
 - [347. Top K Frequent Elements](347.%20Top%20K%20Frequent%20Elements/)
 - [448. Find All Numbers Disappeared in an Array](448-find-all-numbers-disappeared-in-an-array/)
+- [451. Sort Characters By Frequency](451-sort-characters-by-frequency/)
 - [561. Array Partition](561-array-partition/)
 - [2037. Minimum Number of Moves to Seat Everyone](2037-minimum-number-of-moves-to-seat-everyone/)
 - [2785. Sort Vowels in a String](2785-sort-vowels-in-a-string/)
@@ -184,10 +186,13 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [682. Baseball Game](682-baseball-game/)
 - [735. Asteroid Collision](735-asteroid-collision/)
 - [1047. Remove All Adjacent Duplicates In String](1047-remove-all-adjacent-duplicates-in-string/)
+- [2211. Count Collisions on a Road](2211-count-collisions-on-a-road/)
+- [2751. Robot Collisions](2751-robot-collisions/)
 
 ## Monotonic stack
 
 - [739. Daily Temperatures](739-daily-temperatures/)
+- [1944. Number of Visible People in a Queue](1944-number-of-visible-people-in-a-queue/)
 
 ## Linked list
 
@@ -297,6 +302,13 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [1466. Reorder Routes to Make All Paths Lead to the City Zero](1466-reorder-routes-to-make-all-paths-lead-to-the-city-zero/)
 - [1557. Minimum Number of Vertices to Reach All Nodes](1557-minimum-number-of-vertices-to-reach-all-nodes/)
 - [1971. Find if Path Exists in Graph](1971-find-if-path-exists-in-graph/)
+
+## Heap
+
+- [215. Kth Largest Element in an Array](215-kth-largest-element-in-an-array/)
+- [703. Kth Largest Element in a Stream](703-kth-largest-element-in-a-stream/)
+- [1046. Last Stone Weight](1046-last-stone-weight/)
+- [2558. Take Gifts From the Richest Pile](2558-take-gifts-from-the-richest-pile/)
 
 ## Greedy
 
