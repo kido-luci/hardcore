@@ -8,6 +8,12 @@ analyzer:
     curly_braces_in_flow_control_structures: ignore
 include: package:lints/recommended.yaml
 
+formatter:
+  # `dart format` adds a trailing comma whenever it splits a list or argument
+  # list, and there is no option to turn that off. A wide page means it splits,
+  # and so adds commas, far less often.
+  page_width: 100
+
 linter:
   rules:
     # Algorithm code reads better with snake_case for the counter/index arrays
