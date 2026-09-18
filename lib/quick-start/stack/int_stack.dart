@@ -18,13 +18,9 @@ import 'dart:typed_data';
 /// For a grid traversal that marks each cell as it is pushed, every cell is
 /// pushed at most once, so `rows * cols` is enough.
 ///
-/// **There is deliberately no generic `Stack<T>` here.** For any element type
-/// other than `int`, `List<T>` with `add` and `removeLast` is already the
-/// fastest stack available, and a fixed-capacity generic version measures
-/// *slower* than it — the backing store has to be `List<T?>`, so every `pop`
-/// pays a cast, and that costs more than the growth this class avoids. The win
-/// below is specific to `int`, and it comes from the narrower slots described
-/// above, not from preallocation. Use a plain `List<T>` for everything else.
+/// For any element type other than `int`, see `RingStack` (`ring_stack.dart`) — and read its
+/// note first: the win here is specific to `int`, and it comes from the
+/// narrower slots described above, not from preallocation.
 ///
 /// Do not change [_buf] to `List<int>` in order to pick a narrower element type
 /// per instance. Three buffer types then reach this code and every access
@@ -42,6 +38,12 @@ class IntStack {
   bool get isNotEmpty => _length != 0;
 
   int get length => _length;
+
+  /// The backing buffer itself — no copy — at the capacity given to the
+  /// constructor, not at [length]. Slots from [length] on hold whatever was
+  /// last there. Meant for the end of a solve, once nothing will push or pop
+  /// again: writing to it writes to the stack.
+  Int32List get all => _buf;
 
   /// The top of the stack, without removing it.
   int get last => _buf[_length - 1];
@@ -61,4 +63,13 @@ class IntStack {
   /// Drops every item. Keeps the buffer, so reusing one stack across many
   /// traversals costs no further allocation.
   void clear() => _length = 0;
+
+  /// The items bottom to top, as a new list — the same order `List<int>` would
+  /// hold them in if it had been used as the stack. Changing the returned list
+  /// does not change the stack.
+  ///
+  /// The copy is an `Int32List`: one block copy, far cheaper than building a
+  /// `List<int>` item by item, but fixed-length (`add` throws) and truncating
+  /// anything stored into it to 32 bits.
+  List<int> toList() => _buf.sublist(0, _length);
 }
