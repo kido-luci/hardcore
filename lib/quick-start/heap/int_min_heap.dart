@@ -58,6 +58,36 @@ class IntMinHeap {
     _buf[i] = value;
   }
 
+  /// Keeps the [k] largest values seen so far, the heap acting as the barrier:
+  /// the smallest of the kept ones sits on top, waiting to be beaten.
+  ///
+  /// Below [k] items it is plain [add]. Once full, [value] takes the top's
+  /// place when it is larger, in one sift-down — cheaper than [removeFirst]
+  /// plus [add], which sifts down and then straight back up. A [value] equal to
+  /// the top is dropped; keeping it would leave the same multiset.
+  ///
+  /// [k] is at least 1 and never above the capacity given to the constructor.
+  void addBounded(int value, int k) {
+    if (_length < k) {
+      add(value);
+      return;
+    }
+    if (value <= _buf[0]) return;
+
+    final n = _length;
+    var i = 0;
+    while (true) {
+      var child = 2 * i + 1;
+      if (child >= n) break;
+      if (child + 1 < n && _buf[child + 1] < _buf[child]) child++;
+      final c = _buf[child];
+      if (c >= value) break;
+      _buf[i] = c;
+      i = child;
+    }
+    _buf[i] = value;
+  }
+
   int removeFirst() {
     final top = _buf[0];
     final last = _buf[--_length];
