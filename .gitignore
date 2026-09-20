@@ -26,6 +26,10 @@ migrate_working_dir/
 # Claude Code agent-local config
 .claude/
 
+# Agent instruction files — kept on the machine, not in the public repo
+/CLAUDE.md
+/AGENTS.md
+
 # Queue of problems scaffolded but not solved yet — stays on the machine
 /lib/scaffold/
 
