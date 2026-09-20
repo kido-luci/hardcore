@@ -1,38 +1,37 @@
-/// Binary min-heap for any element type, ordered by [compare].
+/// Binary min-heap for any element type.
 ///
 /// Dart ships no heap in `dart:core` or `dart:collection`; `PriorityQueue`
 /// lives in `package:collection`. This one needs no import.
 ///
 /// The top is the element that [compare] ranks lowest: `compare(a, b) < 0`
-/// means `a` comes out before `b`. For natural order use [Heap.min] or
-/// [Heap.max]; otherwise pass a comparator. For Dijkstra, a record keyed on the
-/// distance does it: `Heap<(int, int)>((a, b) => a.$1.compareTo(b.$1))`.
+/// means `a` comes out before `b`. Without a comparator the order is natural,
+/// so [T] must implement `Comparable` (`int`, `double`, `String`, …); a type
+/// that does not throws on the first comparison. For Dijkstra, a record keyed
+/// on the distance does it: `MinHeap<(int, int)>((a, b) => a.$1.compareTo(b.$1))`.
+///
+/// `MaxHeap` (`max_heap.dart`) is this structure with every comparison
+/// reversed — a separate class rather than a flag, so that neither pays an
+/// extra branch per comparison.
 ///
 /// Same API shape as `PriorityQueue` and `RingQueue` — `add`, `first`,
 /// `removeFirst` — so swapping between them is a one-line change. The backing
 /// list grows as needed, so there is no capacity to guess.
 ///
-/// For plain `int` keys use `IntMinHeap` (`int_min_heap.dart`) or `IntMaxHeap` (`int_max_heap.dart`).
-class Heap<T> {
+/// For plain `int` keys use `IntMinHeap` (`int_min_heap.dart`).
+class MinHeap<T> {
   final List<T> _items = [];
   final int Function(T a, T b) compare;
 
-  Heap(this.compare);
-
-  /// Smallest first, by natural order. [T] must implement `Comparable`
-  /// (`int`, `double`, `String`, …); a type that does not throws on the first
-  /// comparison.
-  Heap.min() : compare = ((a, b) => (a as Comparable).compareTo(b));
-
-  /// Largest first, by natural order. Same requirement on [T] as [Heap.min].
-  Heap.max() : compare = ((a, b) => (b as Comparable).compareTo(a));
+  /// Smallest first. Without [compare], by natural order.
+  MinHeap([int Function(T a, T b)? compare])
+    : compare = compare ?? ((a, b) => (a as Comparable).compareTo(b));
 
   /// A heap holding every element of [items], built in O(n) by sifting down
   /// from the last parent — cheaper than [add] one at a time, which is
   /// O(n log n). [items] is copied, not taken over.
   ///
-  /// Without [compare] the order is natural smallest-first, as in [Heap.min].
-  Heap.fromList(Iterable<T> items, [int Function(T a, T b)? compare])
+  /// Without [compare] the order is natural smallest-first, as in [MinHeap].
+  MinHeap.fromList(Iterable<T> items, [int Function(T a, T b)? compare])
     : compare = compare ?? ((a, b) => (a as Comparable).compareTo(b)) {
     _items.addAll(items);
     for (var i = (_items.length >> 1) - 1; i >= 0; i--) {
@@ -46,7 +45,7 @@ class Heap<T> {
 
   int get length => _items.length;
 
-  /// The top element, without removing it.
+  /// The smallest element, without removing it.
   T get first => _items[0];
 
   void add(T value) {
