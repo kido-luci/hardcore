@@ -54,6 +54,28 @@ class MaxHeap<T> {
     _items[i] = value;
   }
 
+  /// Keeps the [k] elements that [compare] ranks lowest, the heap acting as the
+  /// barrier: the highest-ranked of the kept ones sits on top, waiting to be
+  /// beaten.
+  ///
+  /// Below [k] items it is plain [add]. Once full, [value] takes the top's
+  /// place when it ranks below it, in one sift-down — cheaper than
+  /// [removeFirst] plus [add], which sifts down and then straight back up. A
+  /// [value] that ties with the top is dropped; keeping it would leave the same
+  /// multiset.
+  ///
+  /// [k] is at least 1.
+  void addBounded(T value, int k) {
+    if (_items.length < k) {
+      add(value);
+      return;
+    }
+    if (compare(value, _items[0]) >= 0) return;
+
+    _items[0] = value;
+    _siftDown(0);
+  }
+
   T removeFirst() {
     final top = _items[0];
     final last = _items.removeLast();

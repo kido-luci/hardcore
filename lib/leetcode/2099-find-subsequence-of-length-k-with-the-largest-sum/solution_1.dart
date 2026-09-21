@@ -1,3 +1,18 @@
+// 13
+// ms
+// Beats
+// 100.00%
+
+class Solution {
+  List<int> maxSubsequence(List<int> nums, int k) {
+    final heap = MinHeap<int>((a, b) => nums[a].compareTo(nums[b]));
+
+    for (var i = 0; i < nums.length; i++) heap.addBounded(i, k);
+
+    return (heap.toList()..sort()).map((i) => nums[i]).toList();
+  }
+}
+
 /// Binary min-heap for any element type.
 ///
 /// Dart ships no heap in `dart:core` or `dart:collection`; `PriorityQueue`

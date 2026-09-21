@@ -1,21 +1,45 @@
 import 'dart:typed_data';
 
-/// `IntMinHeap` with the order reversed: the largest element is on top.
+// 1
+// ms
+// Beats
+// 73.08%
+
+class Solution {
+  int maxProduct(List<int> nums) {
+    final heap = IntMinHeap(2);
+    heap.add(nums[0]);
+    heap.add(nums[1]);
+
+    for (var i = 2; i < nums.length; i++) {
+      if (heap.first < nums[i])
+        heap
+          ..removeFirst()
+          ..add(nums[i]);
+    }
+
+    return (heap.removeFirst() - 1) * (heap.first - 1);
+  }
+}
+
+/// Binary min-heap of ints on a fixed-capacity typed buffer.
 ///
-/// A separate class rather than a flag on `IntMinHeap`, so that neither pays an
-/// extra branch on every comparison.
-class IntMaxHeap {
+/// Same reasoning as `IntStack`: 4-byte slots, no write barrier, no comparator
+/// call — the ordering is a plain `<`. For a max-heap use `IntMaxHeap`.
+///
+/// [capacity] must be at least the greatest number of items alive at one time.
+class IntMinHeap {
   final Int32List _buf;
   int _length = 0;
 
-  IntMaxHeap(int capacity) : _buf = Int32List(capacity);
+  IntMinHeap(int capacity) : _buf = Int32List(capacity);
 
   /// A heap holding every element of [items], built in O(n) by sifting down
   /// from the last parent — cheaper than [add] one at a time, which is
   /// O(n log n). [items] is copied, not taken over.
   ///
   /// [capacity] defaults to `items.length`; pass more to [add] afterwards.
-  IntMaxHeap.fromList(List<int> items, {int? capacity})
+  IntMinHeap.fromList(List<int> items, {int? capacity})
     : _buf = Int32List(capacity ?? items.length) {
     _buf.setRange(0, items.length, items);
     _length = items.length;
@@ -25,9 +49,9 @@ class IntMaxHeap {
       while (true) {
         var child = 2 * j + 1;
         if (child >= _length) break;
-        if (child + 1 < _length && _buf[child + 1] > _buf[child]) child++;
+        if (child + 1 < _length && _buf[child + 1] < _buf[child]) child++;
         final c = _buf[child];
-        if (c <= value) break;
+        if (c >= value) break;
         _buf[j] = c;
         j = child;
       }
@@ -41,7 +65,7 @@ class IntMaxHeap {
 
   int get length => _length;
 
-  /// The largest element, without removing it.
+  /// The smallest element, without removing it.
   int get first => _buf[0];
 
   void add(int value) {
@@ -49,18 +73,18 @@ class IntMaxHeap {
     while (i > 0) {
       final parent = (i - 1) >> 1;
       final p = _buf[parent];
-      if (value <= p) break;
+      if (value >= p) break;
       _buf[i] = p;
       i = parent;
     }
     _buf[i] = value;
   }
 
-  /// Keeps the [k] smallest values seen so far, the heap acting as the barrier:
-  /// the largest of the kept ones sits on top, waiting to be beaten.
+  /// Keeps the [k] largest values seen so far, the heap acting as the barrier:
+  /// the smallest of the kept ones sits on top, waiting to be beaten.
   ///
   /// Below [k] items it is plain [add]. Once full, [value] takes the top's
-  /// place when it is smaller, in one sift-down — cheaper than [removeFirst]
+  /// place when it is larger, in one sift-down — cheaper than [removeFirst]
   /// plus [add], which sifts down and then straight back up. A [value] equal to
   /// the top is dropped; keeping it would leave the same multiset.
   ///
@@ -70,16 +94,16 @@ class IntMaxHeap {
       add(value);
       return;
     }
-    if (value >= _buf[0]) return;
+    if (value <= _buf[0]) return;
 
     final n = _length;
     var i = 0;
     while (true) {
       var child = 2 * i + 1;
       if (child >= n) break;
-      if (child + 1 < n && _buf[child + 1] > _buf[child]) child++;
+      if (child + 1 < n && _buf[child + 1] < _buf[child]) child++;
       final c = _buf[child];
-      if (c <= value) break;
+      if (c >= value) break;
       _buf[i] = c;
       i = child;
     }
@@ -95,9 +119,9 @@ class IntMaxHeap {
     while (true) {
       var child = 2 * i + 1;
       if (child >= n) break;
-      if (child + 1 < n && _buf[child + 1] > _buf[child]) child++;
+      if (child + 1 < n && _buf[child + 1] < _buf[child]) child++;
       final c = _buf[child];
-      if (c <= last) break;
+      if (c >= last) break;
       _buf[i] = c;
       i = child;
     }
