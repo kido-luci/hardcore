@@ -3,24 +3,24 @@
 Each solved problem sits directly under `lib/leetcode/`. Folders are never grouped on disk, because published episodes link to those paths.
 This page is the grouped view instead: every problem appears once, under the main technique its kept solution actually uses.
 
-325 problems.
+335 problems.
 
-- [Array & hashing](#array--hashing) — 57
+- [Array & hashing](#array--hashing) — 58
 - [String](#string) — 17
-- [Two pointers](#two-pointers) — 23
+- [Two pointers](#two-pointers) — 25
 - [Sliding window](#sliding-window) — 9
 - [Prefix sum](#prefix-sum) — 6
 - [Binary search](#binary-search) — 9
-- [Sorting](#sorting) — 9
-- [Stack](#stack) — 6
+- [Sorting](#sorting) — 12
+- [Stack](#stack) — 7
 - [Monotonic stack](#monotonic-stack) — 2
 - [Linked list](#linked-list) — 10
 - [Binary tree](#binary-tree) — 49
 - [Binary search tree](#binary-search-tree) — 10
 - [Grid BFS/DFS](#grid-bfsdfs) — 20
 - [Graph](#graph) — 5
-- [Heap](#heap) — 4
-- [Greedy](#greedy) — 8
+- [Heap](#heap) — 6
+- [Greedy](#greedy) — 9
 - [Dynamic programming](#dynamic-programming) — 17
 - [Backtracking](#backtracking) — 1
 - [Bit manipulation](#bit-manipulation) — 4
@@ -63,6 +63,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [1672. Richest Customer Wealth](1672-richest-customer-wealth/)
 - [2006. Count Number of Pairs With Absolute Difference K](2006-count-number-of-pairs-with-absolute-difference-k/)
 - [2016. Maximum Difference Between Increasing Elements](2016-maximum-difference-between-increasing-elements/)
+- [2149. Rearrange Array Elements by Sign](2149-rearrange-array-elements-by-sign/)
 - [2161. Partition Array According to Given Pivot](2161-partition-array-according-to-given-pivot/)
 - [2244. Minimum Rounds to Complete All Tasks](2244-minimum-rounds-to-complete-all-tasks/)
 - [2287. Rearrange Characters to Make Target String](2287-rearrange-characters-to-make-target-string/)
@@ -128,6 +129,8 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [344. Reverse String](344-reverse-string/)
 - [345. Reverse Vowels of a String](345-reverse-vowels-of-a-string/)
 - [392. Is Subsequence](392-is-subsequence/)
+- [905. Sort Array By Parity](905-sort-array-by-parity/)
+- [922. Sort Array By Parity II](922-sort-array-by-parity-ii/)
 - [977. Squares of a Sorted Array](977-squares-of-a-sorted-array/)
 - [1968. Array With Elements Not Equal to Average of Neighbors](1968-array-with-elements-not-equal-to-average-of-neighbors/)
 - [2078. Two Furthest Houses With Different Colors](2078-two-furthest-houses-with-different-colors/)
@@ -175,14 +178,18 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [347. Top K Frequent Elements](347.%20Top%20K%20Frequent%20Elements/)
 - [448. Find All Numbers Disappeared in an Array](448-find-all-numbers-disappeared-in-an-array/)
 - [451. Sort Characters By Frequency](451-sort-characters-by-frequency/)
+- [506. Relative Ranks](506-relative-ranks/)
 - [561. Array Partition](561-array-partition/)
 - [2037. Minimum Number of Moves to Seat Everyone](2037-minimum-number-of-moves-to-seat-everyone/)
+- [2164. Sort Even and Odd Indices Independently](2164-sort-even-and-odd-indices-independently/)
+- [2231. Largest Number After Digit Swaps by Parity](2231-largest-number-after-digit-swaps-by-parity/)
 - [2785. Sort Vowels in a String](2785-sort-vowels-in-a-string/)
 - [3467. Transform Array by Parity](3467-transform-array-by-parity/)
 
 ## Stack
 
 - [20. Valid Parentheses](20-valid-parentheses/)
+- [150. Evaluate Reverse Polish Notation](150-evaluate-reverse-polish-notation/)
 - [682. Baseball Game](682-baseball-game/)
 - [735. Asteroid Collision](735-asteroid-collision/)
 - [1047. Remove All Adjacent Duplicates In String](1047-remove-all-adjacent-duplicates-in-string/)
@@ -308,6 +315,8 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [215. Kth Largest Element in an Array](215-kth-largest-element-in-an-array/)
 - [703. Kth Largest Element in a Stream](703-kth-largest-element-in-a-stream/)
 - [1046. Last Stone Weight](1046-last-stone-weight/)
+- [1464. Maximum Product of Two Elements in an Array](1464-maximum-product-of-two-elements-in-an-array/)
+- [2099. Find Subsequence of Length K With the Largest Sum](2099-find-subsequence-of-length-k-with-the-largest-sum/)
 - [2558. Take Gifts From the Richest Pile](2558-take-gifts-from-the-richest-pile/)
 
 ## Greedy
@@ -315,6 +324,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [122. Best Time to Buy and Sell Stock II](122-best-time-to-buy-and-sell-stock-ii/)
 - [455. Assign Cookies](455-assign-cookies/)
 - [605. Can Place Flowers](605-can-place-flowers/)
+- [1005. Maximize Sum Of Array After K Negations](1005-maximize-sum-of-array-after-k-negations/)
 - [1221. Split a String in Balanced Strings](1221-split-a-string-in-balanced-strings/)
 - [1323. Maximum 69 Number](1323-maximum-69-number/)
 - [2126. Destroying Asteroids](2126-destroying-asteroids/)
