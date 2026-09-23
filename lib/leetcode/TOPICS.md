@@ -3,7 +3,7 @@
 Each solved problem sits directly under `lib/leetcode/`. Folders are never grouped on disk, because published episodes link to those paths.
 This page is the grouped view instead: every problem appears once, under the main technique its kept solution actually uses.
 
-335 problems.
+345 problems.
 
 - [Array & hashing](#array--hashing) — 58
 - [String](#string) — 17
@@ -19,15 +19,15 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [Binary search tree](#binary-search-tree) — 10
 - [Grid BFS/DFS](#grid-bfsdfs) — 20
 - [Graph](#graph) — 5
-- [Heap](#heap) — 6
-- [Greedy](#greedy) — 9
+- [Heap](#heap) — 10
+- [Greedy](#greedy) — 12
 - [Dynamic programming](#dynamic-programming) — 17
-- [Backtracking](#backtracking) — 1
+- [Backtracking](#backtracking) — 2
 - [Bit manipulation](#bit-manipulation) — 4
 - [Math](#math) — 36
 - [Simulation](#simulation) — 11
-- [Matrix](#matrix) — 7
-- [Design](#design) — 5
+- [Matrix](#matrix) — 8
+- [Design](#design) — 6
 
 ## Array & hashing
 
@@ -313,14 +313,20 @@ This page is the grouped view instead: every problem appears once, under the mai
 ## Heap
 
 - [215. Kth Largest Element in an Array](215-kth-largest-element-in-an-array/)
+- [239. Sliding Window Maximum](239-sliding-window-maximum/)
 - [703. Kth Largest Element in a Stream](703-kth-largest-element-in-a-stream/)
 - [1046. Last Stone Weight](1046-last-stone-weight/)
+- [1354. Construct Target Array With Multiple Sums](1354-construct-target-array-with-multiple-sums/)
 - [1464. Maximum Product of Two Elements in an Array](1464-maximum-product-of-two-elements-in-an-array/)
+- [1753. Maximum Score From Removing Stones](1753-maximum-score-from-removing-stones/)
 - [2099. Find Subsequence of Length K With the Largest Sum](2099-find-subsequence-of-length-k-with-the-largest-sum/)
+- [2335. Minimum Amount of Time to Fill Cups](2335-minimum-amount-of-time-to-fill-cups/)
 - [2558. Take Gifts From the Richest Pile](2558-take-gifts-from-the-richest-pile/)
 
 ## Greedy
 
+- [45. Jump Game II](45-jump-game-ii/)
+- [55. Jump Game](55-jump-game/)
 - [122. Best Time to Buy and Sell Stock II](122-best-time-to-buy-and-sell-stock-ii/)
 - [455. Assign Cookies](455-assign-cookies/)
 - [605. Can Place Flowers](605-can-place-flowers/)
@@ -328,6 +334,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [1221. Split a String in Balanced Strings](1221-split-a-string-in-balanced-strings/)
 - [1323. Maximum 69 Number](1323-maximum-69-number/)
 - [2126. Destroying Asteroids](2126-destroying-asteroids/)
+- [2144. Minimum Cost of Buying Candies With Discount](2144-minimum-cost-of-buying-candies-with-discount/)
 - [2160. Minimum Sum of Four Digit Number After Splitting Digits](2160-minimum-sum-of-four-digit-number-after-splitting-digits/)
 - [2578. Split With Minimum Sum](2578-split-with-minimum-sum/)
 
@@ -354,6 +361,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 ## Backtracking
 
 - [17. Letter Combinations of a Phone Number](17-letter-combinations-of-a-phone-number/)
+- [77. Combinations](77-combinations/)
 
 ## Bit manipulation
 
@@ -424,9 +432,11 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [1267. Count Servers that Communicate](1267-count-servers-that-communicate/)
 - [1275. Find Winner on a Tic Tac Toe Game](1275-find-winner-on-a-tic-tac-toe-game/)
 - [2022. Convert 1D Array Into 2D Array](2022-convert-1d-array-into-2d-array/)
+- [3142. Check if Grid Satisfies Conditions](3142-check-if-grid-satisfies-conditions/)
 
 ## Design
 
+- [155. Min Stack](155-min-stack/)
 - [225. Implement Stack using Queues](225-implement-stack-using-queues/)
 - [232. Implement Queue using Stacks](232-implement-queue-using-stacks/)
 - [705. Design HashSet](705-design-hashset/)
