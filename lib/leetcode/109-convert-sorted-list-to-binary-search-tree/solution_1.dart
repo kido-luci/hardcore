@@ -1,10 +1,5 @@
 import 'package:hardcore/model/binary_tree.dart';
-
-class ListNode {
-  int val;
-  ListNode? next;
-  ListNode([this.val = 0, this.next]);
-}
+import 'package:hardcore/model/linked_list.dart';
 
 // 1
 // ms

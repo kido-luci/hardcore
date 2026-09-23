@@ -5,7 +5,7 @@ class ListNode {
   ListNode? next;
   ListNode([this.val = 0, this.next]);
 
-  static ListNode? formList(List<int> iterable) {
+  static ListNode? fromList(List<int> iterable) {
     ListNode? current;
 
     for (var i = iterable.length - 1; i >= 0; i--) {
@@ -32,6 +32,6 @@ class ListNode {
 }
 
 void main() {
-  print(ListNode.formList([1, 2, 3, 4, 5]));
-  print(ListNode.formList([5, 4, 3, 2, 1]));
+  print(ListNode.fromList([1, 2, 3, 4, 5]));
+  print(ListNode.fromList([5, 4, 3, 2, 1]));
 }
