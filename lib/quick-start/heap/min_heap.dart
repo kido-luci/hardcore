@@ -104,15 +104,27 @@ class MinHeap<T> {
   /// ties with the top is dropped; keeping it would leave the same multiset.
   ///
   /// [k] is at least 1, and never above [capacity] when there is one.
-  void addBounded(T value, int k) {
+  ///
+  /// Returns what left the heap: the old top when [value] replaced it, [value]
+  /// itself when it was not good enough to get in, and `null` while the heap is
+  /// still below [k] and nothing was dropped. A running sum of the kept values
+  /// therefore updates in one line whatever happened:
+  /// `sum += value - (heap.addBounded(value, k) ?? 0)`.
+  ///
+  /// For a nullable [T] the `null` return is ambiguous — it can mean either
+  /// that nothing was dropped or that a dropped element was itself `null`.
+  T? addBounded(T value, int k) {
     if (_length < k) {
       add(value);
-      return;
+      return null;
     }
-    if (compare(value, _buf[0] as T) <= 0) return;
+    final top = _buf[0] as T;
+    if (compare(value, top) <= 0) return value;
 
     _buf[0] = value;
     _siftDown(0);
+
+    return top;
   }
 
   T removeFirst() {
