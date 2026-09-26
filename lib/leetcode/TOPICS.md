@@ -3,7 +3,7 @@
 Each solved problem sits directly under `lib/leetcode/`. Folders are never grouped on disk, because published episodes link to those paths.
 This page is the grouped view instead: every problem appears once, under the main technique its kept solution actually uses.
 
-345 problems.
+353 problems.
 
 - [Array & hashing](#array--hashing) — 58
 - [String](#string) — 17
@@ -14,14 +14,14 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [Sorting](#sorting) — 12
 - [Stack](#stack) — 7
 - [Monotonic stack](#monotonic-stack) — 2
-- [Linked list](#linked-list) — 10
+- [Linked list](#linked-list) — 12
 - [Binary tree](#binary-tree) — 49
 - [Binary search tree](#binary-search-tree) — 10
 - [Grid BFS/DFS](#grid-bfsdfs) — 20
 - [Graph](#graph) — 5
-- [Heap](#heap) — 10
+- [Heap](#heap) — 14
 - [Greedy](#greedy) — 12
-- [Dynamic programming](#dynamic-programming) — 17
+- [Dynamic programming](#dynamic-programming) — 19
 - [Backtracking](#backtracking) — 2
 - [Bit manipulation](#bit-manipulation) — 4
 - [Math](#math) — 36
@@ -206,11 +206,13 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [19. Remove Nth Node From End of List](19-remove-nth-node-from-end-of-list/)
 - [# 21. Merge Two Sorted Lists](21.%20Merge_Two_Sorted_Lists/)
 - [24. Swap Nodes in Pairs](24-swap-nodes-in-pairs/)
+- [82. Remove Duplicates from Sorted List II](82-remove-duplicates-from-sorted-list-ii/)
 - [83. Remove Duplicates from Sorted List](83-remove-duplicates-from-sorted-list/)
 - [203. Remove Linked List Elements](203-remove-linked-list-elements/)
 - [206. Reverse Linked List](206-reverse-linked-list/)
 - [876. Middle of the Linked List](876-middle-of-the-linked-list/)
 - [1290. Convert Binary Number in a Linked List to Integer](1290-convert-binary-number-in-a-linked-list-to-integer/)
+- [1721. Swapping Nodes in a Linked List](1721-swapping-nodes-in-a-linked-list/)
 - [2095. Delete the Middle Node of a Linked List](2095-delete-the-middle-node-of-a-linked-list/)
 - [3217. Delete Nodes From Linked List Present in Array](3217-delete-nodes-from-linked-list-present-in-array/)
 
@@ -312,9 +314,13 @@ This page is the grouped view instead: every problem appears once, under the mai
 
 ## Heap
 
+- [23. Merge k Sorted Lists](23-merge-k-sorted-lists/)
 - [215. Kth Largest Element in an Array](215-kth-largest-element-in-an-array/)
 - [239. Sliding Window Maximum](239-sliding-window-maximum/)
+- [295. Find Median from Data Stream](295-find-median-from-data-stream/)
+- [632. Smallest Range Covering Elements from K Lists](632-smallest-range-covering-elements-from-k-lists/)
 - [703. Kth Largest Element in a Stream](703-kth-largest-element-in-a-stream/)
+- [857. Minimum Cost to Hire K Workers](857-minimum-cost-to-hire-k-workers/)
 - [1046. Last Stone Weight](1046-last-stone-weight/)
 - [1354. Construct Target Array With Multiple Sums](1354-construct-target-array-with-multiple-sums/)
 - [1464. Maximum Product of Two Elements in an Array](1464-maximum-product-of-two-elements-in-an-array/)
@@ -346,7 +352,9 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [118. Pascal's Triangle](118-pascals-triangle/)
 - [119. Pascal's Triangle II](119-pascals-triangle-ii/)
 - [121. Best Time to Buy and Sell Stock](121.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock/)
+- [123. Best Time to Buy and Sell Stock III](123-best-time-to-buy-and-sell-stock-iii/)
 - [152. Maximum Product Subarray](152-maximum-product-subarray/)
+- [188. Best Time to Buy and Sell Stock IV](188-best-time-to-buy-and-sell-stock-iv/)
 - [198. House Robber](198-house-robber/)
 - [337. House Robber III](337-house-robber-iii/)
 - [509. Fibonacci Number](509-fibonacci-number/)

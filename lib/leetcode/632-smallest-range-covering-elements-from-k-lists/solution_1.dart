@@ -1,38 +1,58 @@
-/// Binary min-heap for any element type.
-///
-/// Dart ships no heap in `dart:core` or `dart:collection`; `PriorityQueue`
-/// lives in `package:collection`. This one needs no import.
-///
-/// The top is the element that [compare] ranks lowest: `compare(a, b) < 0`
-/// means `a` comes out before `b`. Without a comparator the order is natural,
-/// so [T] must implement `Comparable` (`int`, `double`, `String`, …); a type
-/// that does not throws on the first comparison. For Dijkstra, a record keyed
-/// on the distance does it: `MinHeap<(int, int)>((a, b) => a.$1.compareTo(b.$1))`.
-///
-/// `MaxHeap` (`max_heap.dart`) is this structure with every comparison
-/// reversed — a separate class rather than a flag, so that neither pays an
-/// extra branch per comparison.
-///
-/// **capacity** is the greatest number of items alive at one time, and it is a
-/// hard ceiling: [add] past it throws, exactly as `IntMinHeap` and `RingStack`
-/// do, because the buffer is allocated once and never grows. Pass `null` — the
-/// default — for a heap that starts small and doubles as needed, which costs a
-/// reallocation and a copy each time it outgrows itself.
-///
-/// The backing store is a `List<T?>` either way — that is what makes a capacity
-/// expressible at all, since a growable `List<T>` has no way to reserve room.
-/// The price is a cast back to `T` on every read, and a heap reads several
-/// elements per operation, so it is paid often: measured about 10% slower than
-/// the earlier `List<T>` version over 2,000,000 add-then-pop (651 ms against
-/// 718 ms), in both modes. `RingStack` makes the same trade and comes out ahead
-/// because it touches one slot per operation; this one does not. Pass a
-/// capacity for the guarantee that nothing is ever reallocated, not for speed.
-///
-/// [clear] does not null out the slots, so a cleared heap keeps its elements
-/// reachable until they are overwritten. Irrelevant inside a single solve; do
-/// not hold one of these alive as a long-lived field.
-///
-/// For plain `int` keys use `IntMinHeap` (`int_min_heap.dart`).
+import 'dart:math';
+
+// 144
+// ms
+// Beats
+// 100.00%
+
+class Solution {
+  List<int> smallestRange(List<List<int>> nums) {
+    if (nums.length == 1) return [nums[0][0], nums[0][0]];
+
+    final min_heap = MinHeap<(int, int, int)>.fromList(
+      List.generate(nums.length, (i) => (i, 0, nums[i][0]), growable: false),
+      (a, b) => a.$3.compareTo(b.$3),
+      nums.length,
+    );
+
+    int first_max = nums[0][0];
+    for (final e in nums) first_max = max(first_max, e[0]);
+
+    // print('first_max $first_max');
+
+    int? len;
+    final result = List.filled(2, 0);
+
+    while (true) {
+      var (i_1, j_1, val_1) = min_heap.removeFirst();
+
+      final min_2 = min_heap.first.$3;
+
+      final list = nums[i_1];
+
+      while (j_1 < list.length - 1 && list[j_1 + 1] <= min_2) j_1++;
+
+      final new_len = first_max - list[j_1];
+
+      if (len == null || new_len < len) {
+        result[0] = list[j_1];
+        result[1] = first_max;
+
+        if (0 == (len = new_len)) break;
+      }
+
+      if (j_1++ == list.length - 1) break;
+
+      final next = list[j_1];
+
+      min_heap.add((i_1, j_1, next));
+      first_max = max(first_max, next);
+    }
+
+    return result;
+  }
+}
+
 class MinHeap<T> {
   static const _initial = 8;
 
@@ -104,27 +124,15 @@ class MinHeap<T> {
   /// ties with the top is dropped; keeping it would leave the same multiset.
   ///
   /// [k] is at least 1, and never above [capacity] when there is one.
-  ///
-  /// Returns what left the heap: the old top when [value] replaced it, [value]
-  /// itself when it was not good enough to get in, and `null` while the heap is
-  /// still below [k] and nothing was dropped. A running sum of the kept values
-  /// therefore updates in one line whatever happened:
-  /// `sum += value - (heap.addBounded(value, k) ?? 0)`.
-  ///
-  /// For a nullable [T] the `null` return is ambiguous — it can mean either
-  /// that nothing was dropped or that a dropped element was itself `null`.
-  T? addBounded(T value, int k) {
+  void addBounded(T value, int k) {
     if (_length < k) {
       add(value);
-      return null;
+      return;
     }
-    final top = _buf[0] as T;
-    if (compare(value, top) <= 0) return value;
+    if (compare(value, _buf[0] as T) <= 0) return;
 
     _buf[0] = value;
     _siftDown(0);
-
-    return top;
   }
 
   T removeFirst() {
@@ -186,4 +194,14 @@ class MinHeap<T> {
 
   @override
   String toString() => toList().toString();
+}
+
+void main(List<String> args) {
+  print(
+    Solution().smallestRange([
+      [4, 10, 15, 24, 26],
+      [0, 9, 12, 20],
+      [5, 18, 22, 30],
+    ]),
+  );
 }

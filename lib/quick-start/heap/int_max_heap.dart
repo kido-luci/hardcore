@@ -65,12 +65,19 @@ class IntMaxHeap {
   /// the top is dropped; keeping it would leave the same multiset.
   ///
   /// [k] is at least 1 and never above the capacity given to the constructor.
-  void addBounded(int value, int k) {
+  ///
+  /// Returns what left the heap: the old top when [value] replaced it, [value]
+  /// itself when it was not good enough to get in, and `null` while the heap is
+  /// still below [k] and nothing was dropped. A running sum of the kept values
+  /// therefore updates in one line whatever happened:
+  /// `sum += value - (heap.addBounded(value, k) ?? 0)`.
+  int? addBounded(int value, int k) {
     if (_length < k) {
       add(value);
-      return;
+      return null;
     }
-    if (value >= _buf[0]) return;
+    final top = _buf[0];
+    if (value >= top) return value;
 
     final n = _length;
     var i = 0;
@@ -84,6 +91,8 @@ class IntMaxHeap {
       i = child;
     }
     _buf[i] = value;
+
+    return top;
   }
 
   int removeFirst() {

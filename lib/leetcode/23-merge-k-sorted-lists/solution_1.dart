@@ -1,38 +1,97 @@
-/// Binary min-heap for any element type.
-///
-/// Dart ships no heap in `dart:core` or `dart:collection`; `PriorityQueue`
-/// lives in `package:collection`. This one needs no import.
-///
-/// The top is the element that [compare] ranks lowest: `compare(a, b) < 0`
-/// means `a` comes out before `b`. Without a comparator the order is natural,
-/// so [T] must implement `Comparable` (`int`, `double`, `String`, …); a type
-/// that does not throws on the first comparison. For Dijkstra, a record keyed
-/// on the distance does it: `MinHeap<(int, int)>((a, b) => a.$1.compareTo(b.$1))`.
-///
-/// `MaxHeap` (`max_heap.dart`) is this structure with every comparison
-/// reversed — a separate class rather than a flag, so that neither pays an
-/// extra branch per comparison.
-///
-/// **capacity** is the greatest number of items alive at one time, and it is a
-/// hard ceiling: [add] past it throws, exactly as `IntMinHeap` and `RingStack`
-/// do, because the buffer is allocated once and never grows. Pass `null` — the
-/// default — for a heap that starts small and doubles as needed, which costs a
-/// reallocation and a copy each time it outgrows itself.
-///
-/// The backing store is a `List<T?>` either way — that is what makes a capacity
-/// expressible at all, since a growable `List<T>` has no way to reserve room.
-/// The price is a cast back to `T` on every read, and a heap reads several
-/// elements per operation, so it is paid often: measured about 10% slower than
-/// the earlier `List<T>` version over 2,000,000 add-then-pop (651 ms against
-/// 718 ms), in both modes. `RingStack` makes the same trade and comes out ahead
-/// because it touches one slot per operation; this one does not. Pass a
-/// capacity for the guarantee that nothing is ever reallocated, not for speed.
-///
-/// [clear] does not null out the slots, so a cleared heap keeps its elements
-/// reachable until they are overwritten. Irrelevant inside a single solve; do
-/// not hold one of these alive as a long-lived field.
-///
-/// For plain `int` keys use `IntMinHeap` (`int_min_heap.dart`).
+import 'package:hardcore/model/linked_list.dart';
+
+// 11
+// ms
+// Beats
+// 40.00%
+class Solution {
+  ListNode? mergeKLists(List<ListNode?> lists) {
+    if (lists.isEmpty) return null;
+
+    final heap = MinHeap<(int, ListNode)>((a, b) => a.$1.compareTo(b.$1), lists.length);
+
+    for (final e in lists) if (e != null) heap.add((countLen(e), e));
+
+    if (heap.isEmpty) return null;
+
+    while (heap.length > 1) {
+      final n1 = heap.removeFirst();
+      final n2 = heap.removeFirst();
+
+      heap.add((n1.$1 + n2.$1, merge(n1.$2, n2.$2)));
+    }
+
+    return heap.first.$2;
+  }
+
+  int countLen(ListNode? n) {
+    int len = 0;
+
+    while (n != null) {
+      len++;
+      n = n.next;
+    }
+
+    return len;
+  }
+
+  ListNode merge(ListNode? n1, ListNode? n2) {
+    // print((n1, n2));
+
+    final head = ListNode();
+    ListNode cur = head;
+
+    while (n1 != null && n2 != null) {
+      final val_1 = n1.val;
+      final val_2 = n2.val;
+
+      if (val_1 < val_2) {
+        cur.next = n1;
+
+        // int count = 0;
+
+        while (n1!.next != null && n1.next!.val <= val_2) {
+          n1 = n1.next;
+          // print(++count);
+        }
+
+        cur = n1;
+
+        final tmp = n1.next;
+        n1.next = null;
+        n1 = tmp;
+
+        // print('1======');
+        // print(head.next);
+        // print(n1);
+      } else {
+        cur.next = n2;
+
+        // int count = 0;
+
+        while (n2!.next != null && n2.next!.val <= val_1) {
+          n2 = n2.next;
+          // print(++count);
+        }
+
+        cur = n2;
+
+        final tmp = n2.next;
+        n2.next = null;
+        n2 = tmp;
+
+        // print('2======');
+        // print(head.next);
+        // print(n2);
+      }
+    }
+
+    cur.next = n1 ?? n2;
+
+    return head.next!;
+  }
+}
+
 class MinHeap<T> {
   static const _initial = 8;
 
@@ -104,27 +163,15 @@ class MinHeap<T> {
   /// ties with the top is dropped; keeping it would leave the same multiset.
   ///
   /// [k] is at least 1, and never above [capacity] when there is one.
-  ///
-  /// Returns what left the heap: the old top when [value] replaced it, [value]
-  /// itself when it was not good enough to get in, and `null` while the heap is
-  /// still below [k] and nothing was dropped. A running sum of the kept values
-  /// therefore updates in one line whatever happened:
-  /// `sum += value - (heap.addBounded(value, k) ?? 0)`.
-  ///
-  /// For a nullable [T] the `null` return is ambiguous — it can mean either
-  /// that nothing was dropped or that a dropped element was itself `null`.
-  T? addBounded(T value, int k) {
+  void addBounded(T value, int k) {
     if (_length < k) {
       add(value);
-      return null;
+      return;
     }
-    final top = _buf[0] as T;
-    if (compare(value, top) <= 0) return value;
+    if (compare(value, _buf[0] as T) <= 0) return;
 
     _buf[0] = value;
     _siftDown(0);
-
-    return top;
   }
 
   T removeFirst() {
@@ -186,4 +233,21 @@ class MinHeap<T> {
 
   @override
   String toString() => toList().toString();
+}
+
+void main(List<String> args) {
+  // print(Solution().merge(ListNode.fromList([1, 2, 7]), ListNode.fromList([4, 5, 6])));
+  // print(Solution().merge(ListNode.fromList([1, 4, 5]), ListNode.fromList([1, 3, 4])));
+  // // print(Solution().merge(ListNode.fromList([1, 4, 5]), null));
+  // // print(Solution().merge(ListNode.fromList([1]), null));
+  // //
+  print(
+    Solution().mergeKLists(
+      [
+        [1, 4, 5, 6, 7, 8, 9],
+        [1, 3, 4, 10],
+        [2, 6],
+      ].map((e) => ListNode.fromList(e)).toList(),
+    ),
+  );
 }
