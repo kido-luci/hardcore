@@ -3,7 +3,7 @@
 Each solved problem sits directly under `lib/leetcode/`. Folders are never grouped on disk, because published episodes link to those paths.
 This page is the grouped view instead: every problem appears once, under the main technique its kept solution actually uses.
 
-363 problems.
+370 problems.
 
 - [Array & hashing](#array--hashing) — 58
 - [String](#string) — 17
@@ -17,12 +17,12 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [Linked list](#linked-list) — 12
 - [Binary tree](#binary-tree) — 49
 - [Binary search tree](#binary-search-tree) — 10
-- [Grid BFS/DFS](#grid-bfsdfs) — 20
-- [Graph](#graph) — 5
+- [Grid BFS/DFS](#grid-bfsdfs) — 23
+- [Graph](#graph) — 7
 - [Heap](#heap) — 15
 - [Greedy](#greedy) — 12
 - [Dynamic programming](#dynamic-programming) — 19
-- [Backtracking](#backtracking) — 11
+- [Backtracking](#backtracking) — 13
 - [Bit manipulation](#bit-manipulation) — 4
 - [Math](#math) — 36
 - [Simulation](#simulation) — 11
@@ -289,6 +289,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [695. Max Area of Island](695-max-area-of-island/)
 - [733. Flood Fill](733-flood-fill/)
 - [749. Contain Virus](749-contain-virus/)
+- [778. Swim in Rising Water](778-swim-in-rising-water/)
 - [827. Making A Large Island](827-making-a-large-island/)
 - [864. Shortest Path to Get All Keys](864-shortest-path-to-get-all-keys/)
 - [934. Shortest Bridge](934-shortest-bridge/)
@@ -299,17 +300,21 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [1162. As Far from Land as Possible](1162-as-far-from-land-as-possible/)
 - [1254. Number of Closed Islands](1254-number-of-closed-islands/)
 - [1293. Shortest Path in a Grid with Obstacles Elimination](1293-shortest-path-in-a-grid-with-obstacles-elimination/)
+- [1368. Minimum Cost to Make at Least One Valid Path in a Grid](1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid/)
 - [1765. Map of Highest Peak](1765-map-of-highest-peak/)
 - [1905. Count Sub Islands](1905-count-sub-islands/)
 - [1926. Nearest Exit from Entrance in Maze](1926-nearest-exit-from-entrance-in-maze/)
+- [2290. Minimum Obstacle Removal to Reach Corner](2290-minimum-obstacle-removal-to-reach-corner/)
 - [3286. Find a Safe Walk Through a Grid](3286-find-a-safe-walk-through-a-grid/)
 
 ## Graph
 
+- [743. Network Delay Time](743-network-delay-time/)
 - [797. All Paths From Source to Target](797-all-paths-from-source-to-target/)
 - [841. Keys and Rooms](841-keys-and-rooms/)
 - [1466. Reorder Routes to Make All Paths Lead to the City Zero](1466-reorder-routes-to-make-all-paths-lead-to-the-city-zero/)
 - [1557. Minimum Number of Vertices to Reach All Nodes](1557-minimum-number-of-vertices-to-reach-all-nodes/)
+- [1928. Minimum Cost to Reach Destination in Time](1928-minimum-cost-to-reach-destination-in-time/)
 - [1971. Find if Path Exists in Graph](1971-find-if-path-exists-in-graph/)
 
 ## Heap
@@ -379,7 +384,9 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [52. N-Queens II](52-n-queens-ii/)
 - [77. Combinations](77-combinations/)
 - [78. Subsets](78-subsets/)
+- [79. Word Search](79-word-search/)
 - [90. Subsets II](90-subsets-ii/)
+- [980. Unique Paths III](980-unique-paths-iii/)
 
 ## Bit manipulation
 
