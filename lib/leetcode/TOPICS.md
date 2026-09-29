@@ -3,7 +3,7 @@
 Each solved problem sits directly under `lib/leetcode/`. Folders are never grouped on disk, because published episodes link to those paths.
 This page is the grouped view instead: every problem appears once, under the main technique its kept solution actually uses.
 
-353 problems.
+363 problems.
 
 - [Array & hashing](#array--hashing) — 58
 - [String](#string) — 17
@@ -19,10 +19,10 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [Binary search tree](#binary-search-tree) — 10
 - [Grid BFS/DFS](#grid-bfsdfs) — 20
 - [Graph](#graph) — 5
-- [Heap](#heap) — 14
+- [Heap](#heap) — 15
 - [Greedy](#greedy) — 12
 - [Dynamic programming](#dynamic-programming) — 19
-- [Backtracking](#backtracking) — 2
+- [Backtracking](#backtracking) — 11
 - [Bit manipulation](#bit-manipulation) — 4
 - [Math](#math) — 36
 - [Simulation](#simulation) — 11
@@ -318,6 +318,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [215. Kth Largest Element in an Array](215-kth-largest-element-in-an-array/)
 - [239. Sliding Window Maximum](239-sliding-window-maximum/)
 - [295. Find Median from Data Stream](295-find-median-from-data-stream/)
+- [480. Sliding Window Median](480-sliding-window-median/)
 - [632. Smallest Range Covering Elements from K Lists](632-smallest-range-covering-elements-from-k-lists/)
 - [703. Kth Largest Element in a Stream](703-kth-largest-element-in-a-stream/)
 - [857. Minimum Cost to Hire K Workers](857-minimum-cost-to-hire-k-workers/)
@@ -369,7 +370,16 @@ This page is the grouped view instead: every problem appears once, under the mai
 ## Backtracking
 
 - [17. Letter Combinations of a Phone Number](17-letter-combinations-of-a-phone-number/)
+- [37. Sudoku Solver](37-sudoku-solver/)
+- [39. Combination Sum](39-combination-sum/)
+- [40. Combination Sum II](40-combination-sum-ii/)
+- [46. Permutations](46-permutations/)
+- [47. Permutations II](47-permutations-ii/)
+- [51. N-Queens](51-n-queens/)
+- [52. N-Queens II](52-n-queens-ii/)
 - [77. Combinations](77-combinations/)
+- [78. Subsets](78-subsets/)
+- [90. Subsets II](90-subsets-ii/)
 
 ## Bit manipulation
 
