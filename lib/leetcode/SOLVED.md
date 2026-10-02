@@ -1,6 +1,6 @@
 # Solved problems
 
-377 problems, ordered by number. See [TOPICS.md](TOPICS.md) for the grouped view.
+383 problems, ordered by number. See [TOPICS.md](TOPICS.md) for the grouped view.
 
 - [1. Two Sum](1.%20Two%20Sum/)
 - [3. Longest Substring Without Repeating Characters](3.%20Longest%20Substring%20Without%20Repeating%20Characters/)
@@ -83,6 +83,7 @@
 - [167. Two Sum II - Input Array Is Sorted](167.%20Two%20Sum%20II%20-%20Input%20Array%20Is%20Sorted/)
 - [169. Majority Element](169-majority-element/)
 - [171. Excel Sheet Column Number](171-excel-sheet-column-number/)
+- [174. Dungeon Game](174-dungeon-game/)
 - [188. Best Time to Buy and Sell Stock IV](188-best-time-to-buy-and-sell-stock-iv/)
 - [190. Reverse Bits](190-reverse-bits/)
 - [191. Number of 1 Bits](191-number-of-1-bits/)
@@ -145,6 +146,7 @@
 - [480. Sliding Window Median](480-sliding-window-median/)
 - [482. License Key Formatting](482-license-key-formatting/)
 - [485. Max Consecutive Ones](485-max-consecutive-ones/)
+- [486. Predict the Winner](486-predict-the-winner/)
 - [495. Teemo Attacking](495-teemo-attacking/)
 - [501. Find Mode in Binary Search Tree](501-find-mode-in-binary-search-tree/)
 - [504. Base 7](504-base-7/)
@@ -201,6 +203,7 @@
 - [771. Jewels and Stones](771-jewels-and-stones/)
 - [778. Swim in Rising Water](778-swim-in-rising-water/)
 - [783. Minimum Distance Between BST Nodes](783-minimum-distance-between-bst-nodes/)
+- [787. Cheapest Flights Within K Stops](787-cheapest-flights-within-k-stops/)
 - [792. Number of Matching Subsequences](792-number-of-matching-subsequences/)
 - [797. All Paths From Source to Target](797-all-paths-from-source-to-target/)
 - [814. Binary Tree Pruning](814-binary-tree-pruning/)
@@ -210,6 +213,7 @@
 - [864. Shortest Path to Get All Keys](864-shortest-path-to-get-all-keys/)
 - [872. Leaf-Similar Trees](872-leaf-similar-trees/)
 - [876. Middle of the Linked List](876-middle-of-the-linked-list/)
+- [877. Stone Game](877-stone-game/)
 - [890. Find and Replace Pattern](890-find-and-replace-pattern/)
 - [905. Sort Array By Parity](905-sort-array-by-parity/)
 - [922. Sort Array By Parity II](922-sort-array-by-parity-ii/)
@@ -261,6 +265,7 @@
 - [1480. Running Sum of 1d Array](1480-running-sum-of-1d-array/)
 - [1493. Longest Subarray of 1's After Deleting One Element](1493.%20Longest%20Subarray%20of%201%27s%20After%20Deleting%20One%20Element/)
 - [1512. Number of Good Pairs](1512-number-of-good-pairs/)
+- [1514. Path with Maximum Probability](1514-path-with-maximum-probability/)
 - [1528. Shuffle String](1528-shuffle-string/)
 - [1557. Minimum Number of Vertices to Reach All Nodes](1557-minimum-number-of-vertices-to-reach-all-nodes/)
 - [1567. Maximum Length of Subarray With Positive Product](1567-maximum-length-of-subarray-with-positive-product/)
@@ -336,6 +341,7 @@
 - [2577. Minimum Time to Visit a Cell In a Grid](2577-minimum-time-to-visit-a-cell-in-a-grid/)
 - [2578. Split With Minimum Sum](2578-split-with-minimum-sum/)
 - [2642. Design Graph With Shortest Path Calculator](2642-design-graph-with-shortest-path-calculator/)
+- [2672. Number of Adjacent Elements With the Same Color](2672-number-of-adjacent-elements-with-the-same-color/)
 - [2751. Robot Collisions](2751-robot-collisions/)
 - [2769. Find the Maximum Achievable Number](2769-find-the-maximum-achievable-number/)
 - [2785. Sort Vowels in a String](2785-sort-vowels-in-a-string/)
