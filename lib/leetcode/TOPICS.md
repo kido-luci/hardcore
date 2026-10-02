@@ -3,9 +3,9 @@
 Each solved problem sits directly under `lib/leetcode/`. Folders are never grouped on disk, because published episodes link to those paths.
 This page is the grouped view instead: every problem appears once, under the main technique its kept solution actually uses.
 
-370 problems.
+383 problems.
 
-- [Array & hashing](#array--hashing) — 58
+- [Array & hashing](#array--hashing) — 59
 - [String](#string) — 17
 - [Two pointers](#two-pointers) — 25
 - [Sliding window](#sliding-window) — 9
@@ -17,14 +17,14 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [Linked list](#linked-list) — 12
 - [Binary tree](#binary-tree) — 49
 - [Binary search tree](#binary-search-tree) — 10
-- [Grid BFS/DFS](#grid-bfsdfs) — 23
-- [Graph](#graph) — 7
+- [Grid BFS/DFS](#grid-bfsdfs) — 27
+- [Graph](#graph) — 11
 - [Heap](#heap) — 15
 - [Greedy](#greedy) — 12
-- [Dynamic programming](#dynamic-programming) — 19
-- [Backtracking](#backtracking) — 13
+- [Dynamic programming](#dynamic-programming) — 21
+- [Backtracking](#backtracking) — 14
 - [Bit manipulation](#bit-manipulation) — 4
-- [Math](#math) — 36
+- [Math](#math) — 37
 - [Simulation](#simulation) — 11
 - [Matrix](#matrix) — 8
 - [Design](#design) — 6
@@ -75,6 +75,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [2441. Largest Positive Integer That Exists With Its Negative](2441-largest-positive-integer-that-exists-with-its-negative/)
 - [2451. Odd String Difference](2451-odd-string-difference/)
 - [2511. Maximum Enemy Forts That Can Be Captured](2511-maximum-enemy-forts-that-can-be-captured/)
+- [2672. Number of Adjacent Elements With the Same Color](2672-number-of-adjacent-elements-with-the-same-color/)
 - [2798. Number of Employees Who Met the Target](2798-number-of-employees-who-met-the-target/)
 - [2869. Minimum Operations to Collect Elements](2869-minimum-operations-to-collect-elements/)
 - [2870. Minimum Number of Operations to Make Array Empty](2870-minimum-number-of-operations-to-make-array-empty/)
@@ -284,6 +285,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 ## Grid BFS/DFS
 
 - [130. Surrounded Regions](130-surrounded-regions/)
+- [174. Dungeon Game](174-dungeon-game/)
 - [200. Number of Islands](200-number-of-islands/)
 - [542. 01 Matrix](542-01-matrix/)
 - [695. Max Area of Island](695-max-area-of-island/)
@@ -305,17 +307,24 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [1905. Count Sub Islands](1905-count-sub-islands/)
 - [1926. Nearest Exit from Entrance in Maze](1926-nearest-exit-from-entrance-in-maze/)
 - [2290. Minimum Obstacle Removal to Reach Corner](2290-minimum-obstacle-removal-to-reach-corner/)
+- [2577. Minimum Time to Visit a Cell In a Grid](2577-minimum-time-to-visit-a-cell-in-a-grid/)
 - [3286. Find a Safe Walk Through a Grid](3286-find-a-safe-walk-through-a-grid/)
+- [3341. Find Minimum Time to Reach Last Room I](3341-find-minimum-time-to-reach-last-room-i/)
+- [3342. Find Minimum Time to Reach Last Room II](3342-find-minimum-time-to-reach-last-room-ii/)
 
 ## Graph
 
 - [743. Network Delay Time](743-network-delay-time/)
+- [787. Cheapest Flights Within K Stops](787-cheapest-flights-within-k-stops/)
 - [797. All Paths From Source to Target](797-all-paths-from-source-to-target/)
 - [841. Keys and Rooms](841-keys-and-rooms/)
+- [1334. Find the City With the Smallest Number of Neighbors at a Threshold Distance](1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/)
 - [1466. Reorder Routes to Make All Paths Lead to the City Zero](1466-reorder-routes-to-make-all-paths-lead-to-the-city-zero/)
+- [1514. Path with Maximum Probability](1514-path-with-maximum-probability/)
 - [1557. Minimum Number of Vertices to Reach All Nodes](1557-minimum-number-of-vertices-to-reach-all-nodes/)
 - [1928. Minimum Cost to Reach Destination in Time](1928-minimum-cost-to-reach-destination-in-time/)
 - [1971. Find if Path Exists in Graph](1971-find-if-path-exists-in-graph/)
+- [2642. Design Graph With Shortest Path Calculator](2642-design-graph-with-shortest-path-calculator/)
 
 ## Heap
 
@@ -359,10 +368,12 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [119. Pascal's Triangle II](119-pascals-triangle-ii/)
 - [121. Best Time to Buy and Sell Stock](121.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock/)
 - [123. Best Time to Buy and Sell Stock III](123-best-time-to-buy-and-sell-stock-iii/)
+- [139. Word Break](139-word-break/)
 - [152. Maximum Product Subarray](152-maximum-product-subarray/)
 - [188. Best Time to Buy and Sell Stock IV](188-best-time-to-buy-and-sell-stock-iv/)
 - [198. House Robber](198-house-robber/)
 - [337. House Robber III](337-house-robber-iii/)
+- [486. Predict the Winner](486-predict-the-winner/)
 - [509. Fibonacci Number](509-fibonacci-number/)
 - [689. Maximum Sum of 3 Non-Overlapping Subarrays](689-maximum-sum-of-3-non-overlapping-subarrays/)
 - [746. Min Cost Climbing Stairs](746-min-cost-climbing-stairs/)
@@ -386,6 +397,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [78. Subsets](78-subsets/)
 - [79. Word Search](79-word-search/)
 - [90. Subsets II](90-subsets-ii/)
+- [140. Word Break II](140-word-break-ii/)
 - [980. Unique Paths III](980-unique-paths-iii/)
 
 ## Bit manipulation
@@ -407,6 +419,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [342. Power of Four](342-power-of-four/)
 - [415. Add Strings](415-add-strings/)
 - [504. Base 7](504-base-7/)
+- [877. Stone Game](877-stone-game/)
 - [989. Add to Array-Form of Integer](989-add-to-array-form-of-integer/)
 - [1025. Divisor Game](1025-divisor-game/)
 - [1217. Minimum Cost to Move Chips to The Same Position](1217-minimum-cost-to-move-chips-to-the-same-position/)
