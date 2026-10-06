@@ -3,9 +3,9 @@
 Each solved problem sits directly under `lib/leetcode/`. Folders are never grouped on disk, because published episodes link to those paths.
 This page is the grouped view instead: every problem appears once, under the main technique its kept solution actually uses.
 
-383 problems.
+392 problems.
 
-- [Array & hashing](#array--hashing) — 59
+- [Array & hashing](#array--hashing) — 60
 - [String](#string) — 17
 - [Two pointers](#two-pointers) — 25
 - [Sliding window](#sliding-window) — 9
@@ -17,14 +17,14 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [Linked list](#linked-list) — 12
 - [Binary tree](#binary-tree) — 49
 - [Binary search tree](#binary-search-tree) — 10
-- [Grid BFS/DFS](#grid-bfsdfs) — 27
+- [Grid BFS/DFS](#grid-bfsdfs) — 28
 - [Graph](#graph) — 11
 - [Heap](#heap) — 15
-- [Greedy](#greedy) — 12
-- [Dynamic programming](#dynamic-programming) — 21
+- [Greedy](#greedy) — 14
+- [Dynamic programming](#dynamic-programming) — 23
 - [Backtracking](#backtracking) — 14
 - [Bit manipulation](#bit-manipulation) — 4
-- [Math](#math) — 37
+- [Math](#math) — 40
 - [Simulation](#simulation) — 11
 - [Matrix](#matrix) — 8
 - [Design](#design) — 6
@@ -34,6 +34,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [1. Two Sum](1.%20Two%20Sum/)
 - [49. Group Anagrams](49.%20Group%20Anagrams/)
 - [169. Majority Element](169-majority-element/)
+- [202. Happy Number](202-happy-number/)
 - [205. Isomorphic Strings](205-isomorphic-strings/)
 - [217. Contains Duplicate](217-contains-duplicate/)
 - [228. Summary Ranges](228-summary-ranges/)
@@ -288,6 +289,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [174. Dungeon Game](174-dungeon-game/)
 - [200. Number of Islands](200-number-of-islands/)
 - [542. 01 Matrix](542-01-matrix/)
+- [675. Cut Off Trees for Golf Event](675-cut-off-trees-for-golf-event/)
 - [695. Max Area of Island](695-max-area-of-island/)
 - [733. Flood Fill](733-flood-fill/)
 - [749. Contain Virus](749-contain-virus/)
@@ -354,9 +356,11 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [1005. Maximize Sum Of Array After K Negations](1005-maximize-sum-of-array-after-k-negations/)
 - [1221. Split a String in Balanced Strings](1221-split-a-string-in-balanced-strings/)
 - [1323. Maximum 69 Number](1323-maximum-69-number/)
+- [1686. Stone Game VI](1686-stone-game-vi/)
 - [2126. Destroying Asteroids](2126-destroying-asteroids/)
 - [2144. Minimum Cost of Buying Candies With Discount](2144-minimum-cost-of-buying-candies-with-discount/)
 - [2160. Minimum Sum of Four Digit Number After Splitting Digits](2160-minimum-sum-of-four-digit-number-after-splitting-digits/)
+- [2457. Minimum Addition to Make Integer Beautiful](2457-minimum-addition-to-make-integer-beautiful/)
 - [2578. Split With Minimum Sum](2578-split-with-minimum-sum/)
 
 ## Dynamic programming
@@ -379,6 +383,8 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [746. Min Cost Climbing Stairs](746-min-cost-climbing-stairs/)
 - [968. Binary Tree Cameras](968-binary-tree-cameras/)
 - [1137. N-th Tribonacci Number](1137-n-th-tribonacci-number/)
+- [1406. Stone Game III](1406-stone-game-iii/)
+- [1510. Stone Game IV](1510-stone-game-iv/)
 - [1567. Maximum Length of Subarray With Positive Product](1567-maximum-length-of-subarray-with-positive-product/)
 - [1646. Get Maximum in Generated Array](1646-get-maximum-in-generated-array/)
 - [1749. Maximum Absolute Sum of Any Subarray](1749-maximum-absolute-sum-of-any-subarray/)
@@ -415,10 +421,12 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [258. Add Digits](258-add-digits/)
 - [263. Ugly Number](263-ugly-number/)
 - [268. Missing Number](268-missing-number/)
+- [292. Nim Game](292-nim-game/)
 - [326. Power of Three](326-power-of-three/)
 - [342. Power of Four](342-power-of-four/)
 - [415. Add Strings](415-add-strings/)
 - [504. Base 7](504-base-7/)
+- [728. Self Dividing Numbers](728-self-dividing-numbers/)
 - [877. Stone Game](877-stone-game/)
 - [989. Add to Array-Form of Integer](989-add-to-array-form-of-integer/)
 - [1025. Divisor Game](1025-divisor-game/)
@@ -430,6 +438,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [2396. Strictly Palindromic Number](2396-strictly-palindromic-number/)
 - [2413. Smallest Even Multiple](2413-smallest-even-multiple/)
 - [2469. Convert the Temperature](2469-convert-the-temperature/)
+- [2520. Count the Digits That Divide a Number](2520-count-the-digits-that-divide-a-number/)
 - [2535. Difference Between Element Sum and Digit Sum of an Array](2535-difference-between-element-sum-and-digit-sum-of-an-array/)
 - [2544. Alternating Digit Sum](2544-alternating-digit-sum/)
 - [2553. Separate the Digits in an Array](2553-separate-the-digits-in-an-array/)
