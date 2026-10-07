@@ -3,29 +3,29 @@
 Each solved problem sits directly under `lib/leetcode/`. Folders are never grouped on disk, because published episodes link to those paths.
 This page is the grouped view instead: every problem appears once, under the main technique its kept solution actually uses.
 
-392 problems.
+401 problems.
 
-- [Array & hashing](#array--hashing) — 60
+- [Array & hashing](#array--hashing) — 61
 - [String](#string) — 17
 - [Two pointers](#two-pointers) — 25
 - [Sliding window](#sliding-window) — 9
 - [Prefix sum](#prefix-sum) — 6
 - [Binary search](#binary-search) — 9
 - [Sorting](#sorting) — 12
-- [Stack](#stack) — 7
-- [Monotonic stack](#monotonic-stack) — 2
+- [Stack](#stack) — 8
+- [Monotonic stack](#monotonic-stack) — 4
 - [Linked list](#linked-list) — 12
 - [Binary tree](#binary-tree) — 49
 - [Binary search tree](#binary-search-tree) — 10
 - [Grid BFS/DFS](#grid-bfsdfs) — 28
 - [Graph](#graph) — 11
-- [Heap](#heap) — 15
+- [Heap](#heap) — 16
 - [Greedy](#greedy) — 14
 - [Dynamic programming](#dynamic-programming) — 23
 - [Backtracking](#backtracking) — 14
 - [Bit manipulation](#bit-manipulation) — 4
-- [Math](#math) — 40
-- [Simulation](#simulation) — 11
+- [Math](#math) — 42
+- [Simulation](#simulation) — 13
 - [Matrix](#matrix) — 8
 - [Design](#design) — 6
 
@@ -54,6 +54,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [771. Jewels and Stones](771-jewels-and-stones/)
 - [792. Number of Matching Subsequences](792-number-of-matching-subsequences/)
 - [890. Find and Replace Pattern](890-find-and-replace-pattern/)
+- [941. Valid Mountain Array](941-valid-mountain-array/)
 - [1160. Find Words That Can Be Formed by Characters](1160-find-words-that-can-be-formed-by-characters/)
 - [1282. Group the People Given the Group Size They Belong To](1282-group-the-people-given-the-group-size-they-belong-to/)
 - [1299. Replace Elements with Greatest Element on Right Side](1299-replace-elements-with-greatest-element-on-right-side/)
@@ -192,6 +193,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 
 - [20. Valid Parentheses](20-valid-parentheses/)
 - [150. Evaluate Reverse Polish Notation](150-evaluate-reverse-polish-notation/)
+- [636. Exclusive Time of Functions](636-exclusive-time-of-functions/)
 - [682. Baseball Game](682-baseball-game/)
 - [735. Asteroid Collision](735-asteroid-collision/)
 - [1047. Remove All Adjacent Duplicates In String](1047-remove-all-adjacent-duplicates-in-string/)
@@ -200,7 +202,9 @@ This page is the grouped view instead: every problem appears once, under the mai
 
 ## Monotonic stack
 
+- [84. Largest Rectangle in Histogram](84-largest-rectangle-in-histogram/)
 - [739. Daily Temperatures](739-daily-temperatures/)
+- [1475. Final Prices With a Special Discount in a Shop](1475-final-prices-with-a-special-discount-in-a-shop/)
 - [1944. Number of Visible People in a Queue](1944-number-of-visible-people-in-a-queue/)
 
 ## Linked list
@@ -334,6 +338,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [215. Kth Largest Element in an Array](215-kth-largest-element-in-an-array/)
 - [239. Sliding Window Maximum](239-sliding-window-maximum/)
 - [295. Find Median from Data Stream](295-find-median-from-data-stream/)
+- [373. Find K Pairs with Smallest Sums](373-find-k-pairs-with-smallest-sums/)
 - [480. Sliding Window Median](480-sliding-window-median/)
 - [632. Smallest Range Covering Elements from K Lists](632-smallest-range-covering-elements-from-k-lists/)
 - [703. Kth Largest Element in a Stream](703-kth-largest-element-in-a-stream/)
@@ -415,7 +420,9 @@ This page is the grouped view instead: every problem appears once, under the mai
 
 ## Math
 
+- [66. Plus One](66-plus-one/)
 - [67. Add Binary](67-add-binary/)
+- [168. Excel Sheet Column Title](168-excel-sheet-column-title/)
 - [171. Excel Sheet Column Number](171-excel-sheet-column-number/)
 - [231. Power of Two](231-power-of-two/)
 - [258. Add Digits](258-add-digits/)
@@ -462,10 +469,12 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [495. Teemo Attacking](495-teemo-attacking/)
 - [657. Robot Return to Origin](657-robot-return-to-origin/)
 - [1441. Build an Array With Stack Operations](1441-build-an-array-with-stack-operations/)
+- [1700. Number of Students Unable to Eat Lunch](1700-number-of-students-unable-to-eat-lunch/)
 - [1769. Minimum Number of Operations to Move All Balls to Each Box](1769-minimum-number-of-operations-to-move-all-balls-to-each-box/)
 - [1920. Build Array from Permutation](1920-build-array-from-permutation/)
 - [1929. Concatenation of Array](1929-concatenation-of-array/)
 - [2011. Final Value of Variable After Performing Operations](2011-final-value-of-variable-after-performing-operations/)
+- [2073. Time Needed to Buy Tickets](2073-time-needed-to-buy-tickets/)
 - [2293. Min Max Game](2293-min-max-game/)
 - [2525. Categorize Box According to Criteria](2525-categorize-box-according-to-criteria/)
 - [3925. Concatenate Array With Reverse](3925-concatenate-array-with-reverse/)
