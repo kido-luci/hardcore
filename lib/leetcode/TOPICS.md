@@ -3,7 +3,7 @@
 Each solved problem sits directly under `lib/leetcode/`. Folders are never grouped on disk, because published episodes link to those paths.
 This page is the grouped view instead: every problem appears once, under the main technique its kept solution actually uses.
 
-401 problems.
+415 problems.
 
 - [Array & hashing](#array--hashing) — 61
 - [String](#string) — 17
@@ -17,17 +17,17 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [Linked list](#linked-list) — 12
 - [Binary tree](#binary-tree) — 49
 - [Binary search tree](#binary-search-tree) — 10
-- [Grid BFS/DFS](#grid-bfsdfs) — 28
-- [Graph](#graph) — 11
-- [Heap](#heap) — 16
+- [Grid BFS/DFS](#grid-bfsdfs) — 30
+- [Graph](#graph) — 20
+- [Heap](#heap) — 17
 - [Greedy](#greedy) — 14
-- [Dynamic programming](#dynamic-programming) — 23
+- [Dynamic programming](#dynamic-programming) — 24
 - [Backtracking](#backtracking) — 14
 - [Bit manipulation](#bit-manipulation) — 4
 - [Math](#math) — 42
 - [Simulation](#simulation) — 13
 - [Matrix](#matrix) — 8
-- [Design](#design) — 6
+- [Design](#design) — 7
 
 ## Array & hashing
 
@@ -292,6 +292,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [130. Surrounded Regions](130-surrounded-regions/)
 - [174. Dungeon Game](174-dungeon-game/)
 - [200. Number of Islands](200-number-of-islands/)
+- [329. Longest Increasing Path in a Matrix](329-longest-increasing-path-in-a-matrix/)
 - [542. 01 Matrix](542-01-matrix/)
 - [675. Cut Off Trees for Golf Event](675-cut-off-trees-for-golf-event/)
 - [695. Max Area of Island](695-max-area-of-island/)
@@ -313,6 +314,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [1905. Count Sub Islands](1905-count-sub-islands/)
 - [1926. Nearest Exit from Entrance in Maze](1926-nearest-exit-from-entrance-in-maze/)
 - [2290. Minimum Obstacle Removal to Reach Corner](2290-minimum-obstacle-removal-to-reach-corner/)
+- [2328. Number of Increasing Paths in a Grid](2328-number-of-increasing-paths-in-a-grid/)
 - [2577. Minimum Time to Visit a Cell In a Grid](2577-minimum-time-to-visit-a-cell-in-a-grid/)
 - [3286. Find a Safe Walk Through a Grid](3286-find-a-safe-walk-through-a-grid/)
 - [3341. Find Minimum Time to Reach Last Room I](3341-find-minimum-time-to-reach-last-room-i/)
@@ -320,17 +322,26 @@ This page is the grouped view instead: every problem appears once, under the mai
 
 ## Graph
 
+- [207. Course Schedule](207-course-schedule/)
+- [210. Course Schedule II](210-course-schedule-ii/)
 - [743. Network Delay Time](743-network-delay-time/)
+- [773. Sliding Puzzle](773-sliding-puzzle/)
 - [787. Cheapest Flights Within K Stops](787-cheapest-flights-within-k-stops/)
 - [797. All Paths From Source to Target](797-all-paths-from-source-to-target/)
 - [841. Keys and Rooms](841-keys-and-rooms/)
 - [1334. Find the City With the Smallest Number of Neighbors at a Threshold Distance](1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/)
+- [1376. Time Needed to Inform All Employees](1376-time-needed-to-inform-all-employees/)
+- [1377. Frog Position After T Seconds](1377-frog-position-after-t-seconds/)
+- [1443. Minimum Time to Collect All Apples in a Tree](1443-minimum-time-to-collect-all-apples-in-a-tree/)
 - [1466. Reorder Routes to Make All Paths Lead to the City Zero](1466-reorder-routes-to-make-all-paths-lead-to-the-city-zero/)
 - [1514. Path with Maximum Probability](1514-path-with-maximum-probability/)
+- [1519. Number of Nodes in the Sub-Tree With the Same Label](1519-number-of-nodes-in-the-sub-tree-with-the-same-label/)
 - [1557. Minimum Number of Vertices to Reach All Nodes](1557-minimum-number-of-vertices-to-reach-all-nodes/)
 - [1928. Minimum Cost to Reach Destination in Time](1928-minimum-cost-to-reach-destination-in-time/)
 - [1971. Find if Path Exists in Graph](1971-find-if-path-exists-in-graph/)
+- [2050. Parallel Courses III](2050-parallel-courses-iii/)
 - [2642. Design Graph With Shortest Path Calculator](2642-design-graph-with-shortest-path-calculator/)
+- [3425. Longest Special Path](3425-longest-special-path/)
 
 ## Heap
 
@@ -340,6 +351,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [295. Find Median from Data Stream](295-find-median-from-data-stream/)
 - [373. Find K Pairs with Smallest Sums](373-find-k-pairs-with-smallest-sums/)
 - [480. Sliding Window Median](480-sliding-window-median/)
+- [630. Course Schedule III](630-course-schedule-iii/)
 - [632. Smallest Range Covering Elements from K Lists](632-smallest-range-covering-elements-from-k-lists/)
 - [703. Kth Largest Element in a Stream](703-kth-largest-element-in-a-stream/)
 - [857. Minimum Cost to Hire K Workers](857-minimum-cost-to-hire-k-workers/)
@@ -381,6 +393,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [152. Maximum Product Subarray](152-maximum-product-subarray/)
 - [188. Best Time to Buy and Sell Stock IV](188-best-time-to-buy-and-sell-stock-iv/)
 - [198. House Robber](198-house-robber/)
+- [221. Maximal Square](221-maximal-square/)
 - [337. House Robber III](337-house-robber-iii/)
 - [486. Predict the Winner](486-predict-the-winner/)
 - [509. Fibonacci Number](509-fibonacci-number/)
@@ -495,6 +508,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [155. Min Stack](155-min-stack/)
 - [225. Implement Stack using Queues](225-implement-stack-using-queues/)
 - [232. Implement Queue using Stacks](232-implement-queue-using-stacks/)
+- [622. Design Circular Queue](622-design-circular-queue/)
 - [705. Design HashSet](705-design-hashset/)
 - [706. Design HashMap](706-design-hashmap/)
 - [1603. Design Parking System](1603-design-parking-system/)
