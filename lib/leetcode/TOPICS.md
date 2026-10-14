@@ -3,37 +3,38 @@
 Each solved problem sits directly under `lib/leetcode/`. Folders are never grouped on disk, because published episodes link to those paths.
 This page is the grouped view instead: every problem appears once, under the main technique its kept solution actually uses.
 
-383 problems.
+424 problems.
 
-- [Array & hashing](#array--hashing) — 59
+- [Array & hashing](#array--hashing) — 61
 - [String](#string) — 17
 - [Two pointers](#two-pointers) — 25
 - [Sliding window](#sliding-window) — 9
 - [Prefix sum](#prefix-sum) — 6
 - [Binary search](#binary-search) — 9
 - [Sorting](#sorting) — 12
-- [Stack](#stack) — 7
-- [Monotonic stack](#monotonic-stack) — 2
+- [Stack](#stack) — 8
+- [Monotonic stack](#monotonic-stack) — 4
 - [Linked list](#linked-list) — 12
 - [Binary tree](#binary-tree) — 49
 - [Binary search tree](#binary-search-tree) — 10
-- [Grid BFS/DFS](#grid-bfsdfs) — 27
-- [Graph](#graph) — 11
-- [Heap](#heap) — 15
-- [Greedy](#greedy) — 12
-- [Dynamic programming](#dynamic-programming) — 21
+- [Grid BFS/DFS](#grid-bfsdfs) — 32
+- [Graph](#graph) — 21
+- [Heap](#heap) — 17
+- [Greedy](#greedy) — 14
+- [Dynamic programming](#dynamic-programming) — 29
 - [Backtracking](#backtracking) — 14
 - [Bit manipulation](#bit-manipulation) — 4
-- [Math](#math) — 37
-- [Simulation](#simulation) — 11
+- [Math](#math) — 43
+- [Simulation](#simulation) — 13
 - [Matrix](#matrix) — 8
-- [Design](#design) — 6
+- [Design](#design) — 7
 
 ## Array & hashing
 
 - [1. Two Sum](1.%20Two%20Sum/)
 - [49. Group Anagrams](49.%20Group%20Anagrams/)
 - [169. Majority Element](169-majority-element/)
+- [202. Happy Number](202-happy-number/)
 - [205. Isomorphic Strings](205-isomorphic-strings/)
 - [217. Contains Duplicate](217-contains-duplicate/)
 - [228. Summary Ranges](228-summary-ranges/)
@@ -53,6 +54,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [771. Jewels and Stones](771-jewels-and-stones/)
 - [792. Number of Matching Subsequences](792-number-of-matching-subsequences/)
 - [890. Find and Replace Pattern](890-find-and-replace-pattern/)
+- [941. Valid Mountain Array](941-valid-mountain-array/)
 - [1160. Find Words That Can Be Formed by Characters](1160-find-words-that-can-be-formed-by-characters/)
 - [1282. Group the People Given the Group Size They Belong To](1282-group-the-people-given-the-group-size-they-belong-to/)
 - [1299. Replace Elements with Greatest Element on Right Side](1299-replace-elements-with-greatest-element-on-right-side/)
@@ -191,6 +193,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 
 - [20. Valid Parentheses](20-valid-parentheses/)
 - [150. Evaluate Reverse Polish Notation](150-evaluate-reverse-polish-notation/)
+- [636. Exclusive Time of Functions](636-exclusive-time-of-functions/)
 - [682. Baseball Game](682-baseball-game/)
 - [735. Asteroid Collision](735-asteroid-collision/)
 - [1047. Remove All Adjacent Duplicates In String](1047-remove-all-adjacent-duplicates-in-string/)
@@ -199,7 +202,9 @@ This page is the grouped view instead: every problem appears once, under the mai
 
 ## Monotonic stack
 
+- [84. Largest Rectangle in Histogram](84-largest-rectangle-in-histogram/)
 - [739. Daily Temperatures](739-daily-temperatures/)
+- [1475. Final Prices With a Special Discount in a Shop](1475-final-prices-with-a-special-discount-in-a-shop/)
 - [1944. Number of Visible People in a Queue](1944-number-of-visible-people-in-a-queue/)
 
 ## Linked list
@@ -287,7 +292,9 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [130. Surrounded Regions](130-surrounded-regions/)
 - [174. Dungeon Game](174-dungeon-game/)
 - [200. Number of Islands](200-number-of-islands/)
+- [329. Longest Increasing Path in a Matrix](329-longest-increasing-path-in-a-matrix/)
 - [542. 01 Matrix](542-01-matrix/)
+- [675. Cut Off Trees for Golf Event](675-cut-off-trees-for-golf-event/)
 - [695. Max Area of Island](695-max-area-of-island/)
 - [733. Flood Fill](733-flood-fill/)
 - [749. Contain Virus](749-contain-virus/)
@@ -307,24 +314,37 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [1905. Count Sub Islands](1905-count-sub-islands/)
 - [1926. Nearest Exit from Entrance in Maze](1926-nearest-exit-from-entrance-in-maze/)
 - [2290. Minimum Obstacle Removal to Reach Corner](2290-minimum-obstacle-removal-to-reach-corner/)
+- [2328. Number of Increasing Paths in a Grid](2328-number-of-increasing-paths-in-a-grid/)
 - [2577. Minimum Time to Visit a Cell In a Grid](2577-minimum-time-to-visit-a-cell-in-a-grid/)
 - [3286. Find a Safe Walk Through a Grid](3286-find-a-safe-walk-through-a-grid/)
 - [3341. Find Minimum Time to Reach Last Room I](3341-find-minimum-time-to-reach-last-room-i/)
 - [3342. Find Minimum Time to Reach Last Room II](3342-find-minimum-time-to-reach-last-room-ii/)
+- [4003. Minimum Cost Path with Alternating Directions III](4003-minimum-cost-path-with-alternating-directions-iii/)
+- [4046. Minimum Cost Path With At Most K Turns](4046-minimum-cost-path-with-at-most-k-turns/)
 
 ## Graph
 
+- [207. Course Schedule](207-course-schedule/)
+- [210. Course Schedule II](210-course-schedule-ii/)
+- [322. Coin Change](322-coin-change/)
 - [743. Network Delay Time](743-network-delay-time/)
+- [773. Sliding Puzzle](773-sliding-puzzle/)
 - [787. Cheapest Flights Within K Stops](787-cheapest-flights-within-k-stops/)
 - [797. All Paths From Source to Target](797-all-paths-from-source-to-target/)
 - [841. Keys and Rooms](841-keys-and-rooms/)
 - [1334. Find the City With the Smallest Number of Neighbors at a Threshold Distance](1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/)
+- [1376. Time Needed to Inform All Employees](1376-time-needed-to-inform-all-employees/)
+- [1377. Frog Position After T Seconds](1377-frog-position-after-t-seconds/)
+- [1443. Minimum Time to Collect All Apples in a Tree](1443-minimum-time-to-collect-all-apples-in-a-tree/)
 - [1466. Reorder Routes to Make All Paths Lead to the City Zero](1466-reorder-routes-to-make-all-paths-lead-to-the-city-zero/)
 - [1514. Path with Maximum Probability](1514-path-with-maximum-probability/)
+- [1519. Number of Nodes in the Sub-Tree With the Same Label](1519-number-of-nodes-in-the-sub-tree-with-the-same-label/)
 - [1557. Minimum Number of Vertices to Reach All Nodes](1557-minimum-number-of-vertices-to-reach-all-nodes/)
 - [1928. Minimum Cost to Reach Destination in Time](1928-minimum-cost-to-reach-destination-in-time/)
 - [1971. Find if Path Exists in Graph](1971-find-if-path-exists-in-graph/)
+- [2050. Parallel Courses III](2050-parallel-courses-iii/)
 - [2642. Design Graph With Shortest Path Calculator](2642-design-graph-with-shortest-path-calculator/)
+- [3425. Longest Special Path](3425-longest-special-path/)
 
 ## Heap
 
@@ -332,7 +352,9 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [215. Kth Largest Element in an Array](215-kth-largest-element-in-an-array/)
 - [239. Sliding Window Maximum](239-sliding-window-maximum/)
 - [295. Find Median from Data Stream](295-find-median-from-data-stream/)
+- [373. Find K Pairs with Smallest Sums](373-find-k-pairs-with-smallest-sums/)
 - [480. Sliding Window Median](480-sliding-window-median/)
+- [630. Course Schedule III](630-course-schedule-iii/)
 - [632. Smallest Range Covering Elements from K Lists](632-smallest-range-covering-elements-from-k-lists/)
 - [703. Kth Largest Element in a Stream](703-kth-largest-element-in-a-stream/)
 - [857. Minimum Cost to Hire K Workers](857-minimum-cost-to-hire-k-workers/)
@@ -354,9 +376,11 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [1005. Maximize Sum Of Array After K Negations](1005-maximize-sum-of-array-after-k-negations/)
 - [1221. Split a String in Balanced Strings](1221-split-a-string-in-balanced-strings/)
 - [1323. Maximum 69 Number](1323-maximum-69-number/)
+- [1686. Stone Game VI](1686-stone-game-vi/)
 - [2126. Destroying Asteroids](2126-destroying-asteroids/)
 - [2144. Minimum Cost of Buying Candies With Discount](2144-minimum-cost-of-buying-candies-with-discount/)
 - [2160. Minimum Sum of Four Digit Number After Splitting Digits](2160-minimum-sum-of-four-digit-number-after-splitting-digits/)
+- [2457. Minimum Addition to Make Integer Beautiful](2457-minimum-addition-to-make-integer-beautiful/)
 - [2578. Split With Minimum Sum](2578-split-with-minimum-sum/)
 
 ## Dynamic programming
@@ -372,13 +396,21 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [152. Maximum Product Subarray](152-maximum-product-subarray/)
 - [188. Best Time to Buy and Sell Stock IV](188-best-time-to-buy-and-sell-stock-iv/)
 - [198. House Robber](198-house-robber/)
+- [221. Maximal Square](221-maximal-square/)
 - [337. House Robber III](337-house-robber-iii/)
+- [377. Combination Sum IV](377-combination-sum-iv/)
+- [416. Partition Equal Subset Sum](416-partition-equal-subset-sum/)
 - [486. Predict the Winner](486-predict-the-winner/)
 - [509. Fibonacci Number](509-fibonacci-number/)
+- [518. Coin Change II](518-coin-change-ii/)
 - [689. Maximum Sum of 3 Non-Overlapping Subarrays](689-maximum-sum-of-3-non-overlapping-subarrays/)
 - [746. Min Cost Climbing Stairs](746-min-cost-climbing-stairs/)
+- [931. Minimum Falling Path Sum](931-minimum-falling-path-sum/)
 - [968. Binary Tree Cameras](968-binary-tree-cameras/)
 - [1137. N-th Tribonacci Number](1137-n-th-tribonacci-number/)
+- [1289. Minimum Falling Path Sum II](1289-minimum-falling-path-sum-ii/)
+- [1406. Stone Game III](1406-stone-game-iii/)
+- [1510. Stone Game IV](1510-stone-game-iv/)
 - [1567. Maximum Length of Subarray With Positive Product](1567-maximum-length-of-subarray-with-positive-product/)
 - [1646. Get Maximum in Generated Array](1646-get-maximum-in-generated-array/)
 - [1749. Maximum Absolute Sum of Any Subarray](1749-maximum-absolute-sum-of-any-subarray/)
@@ -409,16 +441,21 @@ This page is the grouped view instead: every problem appears once, under the mai
 
 ## Math
 
+- [66. Plus One](66-plus-one/)
 - [67. Add Binary](67-add-binary/)
+- [168. Excel Sheet Column Title](168-excel-sheet-column-title/)
 - [171. Excel Sheet Column Number](171-excel-sheet-column-number/)
 - [231. Power of Two](231-power-of-two/)
 - [258. Add Digits](258-add-digits/)
 - [263. Ugly Number](263-ugly-number/)
 - [268. Missing Number](268-missing-number/)
+- [292. Nim Game](292-nim-game/)
 - [326. Power of Three](326-power-of-three/)
 - [342. Power of Four](342-power-of-four/)
 - [415. Add Strings](415-add-strings/)
+- [441. Arranging Coins](441-arranging-coins/)
 - [504. Base 7](504-base-7/)
+- [728. Self Dividing Numbers](728-self-dividing-numbers/)
 - [877. Stone Game](877-stone-game/)
 - [989. Add to Array-Form of Integer](989-add-to-array-form-of-integer/)
 - [1025. Divisor Game](1025-divisor-game/)
@@ -430,6 +467,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [2396. Strictly Palindromic Number](2396-strictly-palindromic-number/)
 - [2413. Smallest Even Multiple](2413-smallest-even-multiple/)
 - [2469. Convert the Temperature](2469-convert-the-temperature/)
+- [2520. Count the Digits That Divide a Number](2520-count-the-digits-that-divide-a-number/)
 - [2535. Difference Between Element Sum and Digit Sum of an Array](2535-difference-between-element-sum-and-digit-sum-of-an-array/)
 - [2544. Alternating Digit Sum](2544-alternating-digit-sum/)
 - [2553. Separate the Digits in an Array](2553-separate-the-digits-in-an-array/)
@@ -453,10 +491,12 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [495. Teemo Attacking](495-teemo-attacking/)
 - [657. Robot Return to Origin](657-robot-return-to-origin/)
 - [1441. Build an Array With Stack Operations](1441-build-an-array-with-stack-operations/)
+- [1700. Number of Students Unable to Eat Lunch](1700-number-of-students-unable-to-eat-lunch/)
 - [1769. Minimum Number of Operations to Move All Balls to Each Box](1769-minimum-number-of-operations-to-move-all-balls-to-each-box/)
 - [1920. Build Array from Permutation](1920-build-array-from-permutation/)
 - [1929. Concatenation of Array](1929-concatenation-of-array/)
 - [2011. Final Value of Variable After Performing Operations](2011-final-value-of-variable-after-performing-operations/)
+- [2073. Time Needed to Buy Tickets](2073-time-needed-to-buy-tickets/)
 - [2293. Min Max Game](2293-min-max-game/)
 - [2525. Categorize Box According to Criteria](2525-categorize-box-according-to-criteria/)
 - [3925. Concatenate Array With Reverse](3925-concatenate-array-with-reverse/)
@@ -477,6 +517,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [155. Min Stack](155-min-stack/)
 - [225. Implement Stack using Queues](225-implement-stack-using-queues/)
 - [232. Implement Queue using Stacks](232-implement-queue-using-stacks/)
+- [622. Design Circular Queue](622-design-circular-queue/)
 - [705. Design HashSet](705-design-hashset/)
 - [706. Design HashMap](706-design-hashmap/)
 - [1603. Design Parking System](1603-design-parking-system/)
