@@ -3,7 +3,7 @@
 Each solved problem sits directly under `lib/leetcode/`. Folders are never grouped on disk, because published episodes link to those paths.
 This page is the grouped view instead: every problem appears once, under the main technique its kept solution actually uses.
 
-415 problems.
+424 problems.
 
 - [Array & hashing](#array--hashing) — 61
 - [String](#string) — 17
@@ -17,14 +17,14 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [Linked list](#linked-list) — 12
 - [Binary tree](#binary-tree) — 49
 - [Binary search tree](#binary-search-tree) — 10
-- [Grid BFS/DFS](#grid-bfsdfs) — 30
-- [Graph](#graph) — 20
+- [Grid BFS/DFS](#grid-bfsdfs) — 32
+- [Graph](#graph) — 21
 - [Heap](#heap) — 17
 - [Greedy](#greedy) — 14
-- [Dynamic programming](#dynamic-programming) — 24
+- [Dynamic programming](#dynamic-programming) — 29
 - [Backtracking](#backtracking) — 14
 - [Bit manipulation](#bit-manipulation) — 4
-- [Math](#math) — 42
+- [Math](#math) — 43
 - [Simulation](#simulation) — 13
 - [Matrix](#matrix) — 8
 - [Design](#design) — 7
@@ -319,11 +319,14 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [3286. Find a Safe Walk Through a Grid](3286-find-a-safe-walk-through-a-grid/)
 - [3341. Find Minimum Time to Reach Last Room I](3341-find-minimum-time-to-reach-last-room-i/)
 - [3342. Find Minimum Time to Reach Last Room II](3342-find-minimum-time-to-reach-last-room-ii/)
+- [4003. Minimum Cost Path with Alternating Directions III](4003-minimum-cost-path-with-alternating-directions-iii/)
+- [4046. Minimum Cost Path With At Most K Turns](4046-minimum-cost-path-with-at-most-k-turns/)
 
 ## Graph
 
 - [207. Course Schedule](207-course-schedule/)
 - [210. Course Schedule II](210-course-schedule-ii/)
+- [322. Coin Change](322-coin-change/)
 - [743. Network Delay Time](743-network-delay-time/)
 - [773. Sliding Puzzle](773-sliding-puzzle/)
 - [787. Cheapest Flights Within K Stops](787-cheapest-flights-within-k-stops/)
@@ -395,12 +398,17 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [198. House Robber](198-house-robber/)
 - [221. Maximal Square](221-maximal-square/)
 - [337. House Robber III](337-house-robber-iii/)
+- [377. Combination Sum IV](377-combination-sum-iv/)
+- [416. Partition Equal Subset Sum](416-partition-equal-subset-sum/)
 - [486. Predict the Winner](486-predict-the-winner/)
 - [509. Fibonacci Number](509-fibonacci-number/)
+- [518. Coin Change II](518-coin-change-ii/)
 - [689. Maximum Sum of 3 Non-Overlapping Subarrays](689-maximum-sum-of-3-non-overlapping-subarrays/)
 - [746. Min Cost Climbing Stairs](746-min-cost-climbing-stairs/)
+- [931. Minimum Falling Path Sum](931-minimum-falling-path-sum/)
 - [968. Binary Tree Cameras](968-binary-tree-cameras/)
 - [1137. N-th Tribonacci Number](1137-n-th-tribonacci-number/)
+- [1289. Minimum Falling Path Sum II](1289-minimum-falling-path-sum-ii/)
 - [1406. Stone Game III](1406-stone-game-iii/)
 - [1510. Stone Game IV](1510-stone-game-iv/)
 - [1567. Maximum Length of Subarray With Positive Product](1567-maximum-length-of-subarray-with-positive-product/)
@@ -445,6 +453,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [326. Power of Three](326-power-of-three/)
 - [342. Power of Four](342-power-of-four/)
 - [415. Add Strings](415-add-strings/)
+- [441. Arranging Coins](441-arranging-coins/)
 - [504. Base 7](504-base-7/)
 - [728. Self Dividing Numbers](728-self-dividing-numbers/)
 - [877. Stone Game](877-stone-game/)

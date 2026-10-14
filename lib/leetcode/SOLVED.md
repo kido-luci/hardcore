@@ -1,6 +1,6 @@
 # Solved problems
 
-415 problems, ordered by number. See [TOPICS.md](TOPICS.md) for the grouped view.
+424 problems, ordered by number. See [TOPICS.md](TOPICS.md) for the grouped view.
 
 - [1. Two Sum](1.%20Two%20Sum/)
 - [3. Longest Substring Without Repeating Characters](3.%20Longest%20Substring%20Without%20Repeating%20Characters/)
@@ -124,6 +124,7 @@
 - [292. Nim Game](292-nim-game/)
 - [295. Find Median from Data Stream](295-find-median-from-data-stream/)
 - [303. Range Sum Query - Immutable](303-range-sum-query-immutable/)
+- [322. Coin Change](322-coin-change/)
 - [326. Power of Three](326-power-of-three/)
 - [329. Longest Increasing Path in a Matrix](329-longest-increasing-path-in-a-matrix/)
 - [337. House Robber III](337-house-robber-iii/)
@@ -135,6 +136,7 @@
 - [350. Intersection of Two Arrays II](350-intersection-of-two-arrays-ii/)
 - [367. Valid Perfect Square](367-valid-perfect-square/)
 - [373. Find K Pairs with Smallest Sums](373-find-k-pairs-with-smallest-sums/)
+- [377. Combination Sum IV](377-combination-sum-iv/)
 - [383. Ransom Note](383-ransom-note/)
 - [387. First Unique Character in a String](387-first-unique-character-in-a-string/)
 - [389. Find the Difference](389-find-the-difference/)
@@ -144,10 +146,12 @@
 - [412. Fizz Buzz](412-fizz-buzz/)
 - [414. Third Maximum Number](414-third-maximum-number/)
 - [415. Add Strings](415-add-strings/)
+- [416. Partition Equal Subset Sum](416-partition-equal-subset-sum/)
 - [419. Battleships in a Board](419-battleships-in-a-board/)
 - [424. Longest Repeating Character Replacement](424.%20Longest%20Repeating%20Character%20Replacement/)
 - [434. Number of Segments in a String](434-number-of-segments-in-a-string/)
 - [437. Path Sum III](437-path-sum-iii/)
+- [441. Arranging Coins](441-arranging-coins/)
 - [448. Find All Numbers Disappeared in an Array](448-find-all-numbers-disappeared-in-an-array/)
 - [450. Delete Node in a BST](450-delete-node-in-a-bst/)
 - [451. Sort Characters By Frequency](451-sort-characters-by-frequency/)
@@ -165,6 +169,7 @@
 - [509. Fibonacci Number](509-fibonacci-number/)
 - [513. Find Bottom Left Tree Value](513-find-bottom-left-tree-value/)
 - [515. Find Largest Value in Each Tree Row](515-find-largest-value-in-each-tree-row/)
+- [518. Coin Change II](518-coin-change-ii/)
 - [520. Detect Capital](520-detect-capital/)
 - [521. Longest Uncommon Subsequence I](521-longest-uncommon-subsequence-i/)
 - [530. Minimum Absolute Difference in BST](530-minimum-absolute-difference-in-bst/)
@@ -233,6 +238,7 @@
 - [890. Find and Replace Pattern](890-find-and-replace-pattern/)
 - [905. Sort Array By Parity](905-sort-array-by-parity/)
 - [922. Sort Array By Parity II](922-sort-array-by-parity-ii/)
+- [931. Minimum Falling Path Sum](931-minimum-falling-path-sum/)
 - [934. Shortest Bridge](934-shortest-bridge/)
 - [938. Range Sum of BST](938-range-sum-of-bst/)
 - [941. Valid Mountain Array](941-valid-mountain-array/)
@@ -264,6 +270,7 @@
 - [1267. Count Servers that Communicate](1267-count-servers-that-communicate/)
 - [1275. Find Winner on a Tic Tac Toe Game](1275-find-winner-on-a-tic-tac-toe-game/)
 - [1282. Group the People Given the Group Size They Belong To](1282-group-the-people-given-the-group-size-they-belong-to/)
+- [1289. Minimum Falling Path Sum II](1289-minimum-falling-path-sum-ii/)
 - [1290. Convert Binary Number in a Linked List to Integer](1290-convert-binary-number-in-a-linked-list-to-integer/)
 - [1293. Shortest Path in a Grid with Obstacles Elimination](1293-shortest-path-in-a-grid-with-obstacles-elimination/)
 - [1299. Replace Elements with Greatest Element on Right Side](1299-replace-elements-with-greatest-element-on-right-side/)
@@ -417,3 +424,5 @@
 - [3895. Count Digit Appearances](3895-count-digit-appearances/)
 - [3925. Concatenate Array With Reverse](3925-concatenate-array-with-reverse/)
 - [3945. Digit Frequency Score](3945-digit-frequency-score/)
+- [4003. Minimum Cost Path with Alternating Directions III](4003-minimum-cost-path-with-alternating-directions-iii/)
+- [4046. Minimum Cost Path With At Most K Turns](4046-minimum-cost-path-with-at-most-k-turns/)
