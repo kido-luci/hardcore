@@ -3,30 +3,30 @@
 Each solved problem sits directly under `lib/leetcode/`. Folders are never grouped on disk, because published episodes link to those paths.
 This page is the grouped view instead: every problem appears once, under the main technique its kept solution actually uses.
 
-424 problems.
+447 problems.
 
-- [Array & hashing](#array--hashing) — 61
-- [String](#string) — 17
+- [Array & hashing](#array--hashing) — 62
+- [String](#string) — 21
 - [Two pointers](#two-pointers) — 25
 - [Sliding window](#sliding-window) — 9
-- [Prefix sum](#prefix-sum) — 6
+- [Prefix sum](#prefix-sum) — 9
 - [Binary search](#binary-search) — 9
 - [Sorting](#sorting) — 12
 - [Stack](#stack) — 8
-- [Monotonic stack](#monotonic-stack) — 4
+- [Monotonic stack](#monotonic-stack) — 6
 - [Linked list](#linked-list) — 12
 - [Binary tree](#binary-tree) — 49
 - [Binary search tree](#binary-search-tree) — 10
 - [Grid BFS/DFS](#grid-bfsdfs) — 32
-- [Graph](#graph) — 21
+- [Graph](#graph) — 22
 - [Heap](#heap) — 17
 - [Greedy](#greedy) — 14
-- [Dynamic programming](#dynamic-programming) — 29
+- [Dynamic programming](#dynamic-programming) — 34
 - [Backtracking](#backtracking) — 14
 - [Bit manipulation](#bit-manipulation) — 4
-- [Math](#math) — 43
-- [Simulation](#simulation) — 13
-- [Matrix](#matrix) — 8
+- [Math](#math) — 45
+- [Simulation](#simulation) — 14
+- [Matrix](#matrix) — 12
 - [Design](#design) — 7
 
 ## Array & hashing
@@ -68,6 +68,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [2149. Rearrange Array Elements by Sign](2149-rearrange-array-elements-by-sign/)
 - [2161. Partition Array According to Given Pivot](2161-partition-array-according-to-given-pivot/)
 - [2244. Minimum Rounds to Complete All Tasks](2244-minimum-rounds-to-complete-all-tasks/)
+- [2283. Check if Number Has Equal Digit Count and Digit Value](2283-check-if-number-has-equal-digit-count-and-digit-value/)
 - [2287. Rearrange Characters to Make Target String](2287-rearrange-characters-to-make-target-string/)
 - [2309. Greatest English Letter in Upper and Lower Case](2309-greatest-english-letter-in-upper-and-lower-case/)
 - [2347. Best Poker Hand](2347-best-poker-hand/)
@@ -97,9 +98,12 @@ This page is the grouped view instead: every problem appears once, under the mai
 
 - [58. Length of Last Word](58-length-of-last-word/)
 - [434. Number of Segments in a String](434-number-of-segments-in-a-string/)
+- [459. Repeated Substring Pattern](459-repeated-substring-pattern/)
 - [482. License Key Formatting](482-license-key-formatting/)
+- [500. Keyboard Row](500-keyboard-row/)
 - [520. Detect Capital](520-detect-capital/)
 - [521. Longest Uncommon Subsequence I](521-longest-uncommon-subsequence-i/)
+- [541. Reverse String II](541-reverse-string-ii/)
 - [551. Student Attendance Record I](551-student-attendance-record-i/)
 - [557. Reverse Words in a String III](557-reverse-words-in-a-string-iii/)
 - [709. To Lower Case](709-to-lower-case/)
@@ -110,6 +114,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [2129. Capitalize the Title](2129-capitalize-the-title/)
 - [2942. Find Words Containing Character](2942-find-words-containing-character/)
 - [3110. Score of a String](3110-score-of-a-string/)
+- [3330. Find the Original Typed String I](3330-find-the-original-typed-string-i/)
 - [3407. Substring Matching Pattern](3407-substring-matching-pattern/)
 - [3838. Weighted Word Mapping](3838-weighted-word-mapping/)
 
@@ -157,8 +162,11 @@ This page is the grouped view instead: every problem appears once, under the mai
 
 - [238. Product of Array Except Self](238.%20Product%20of%20Array%20Except%20Self/)
 - [303. Range Sum Query - Immutable](303-range-sum-query-immutable/)
+- [560. Subarray Sum Equals K](560-subarray-sum-equals-k/)
+- [724. Find Pivot Index](724-find-pivot-index/)
 - [1365. How Many Numbers Are Smaller Than the Current Number](1365-how-many-numbers-are-smaller-than-the-current-number/)
 - [1480. Running Sum of 1d Array](1480-running-sum-of-1d-array/)
+- [1991. Find the Middle Index in Array](1991-find-the-middle-index-in-array/)
 - [2574. Left and Right Sum Differences](2574-left-and-right-sum-differences/)
 - [3427. Sum of Variable Length Subarrays](3427-sum-of-variable-length-subarrays/)
 
@@ -203,6 +211,8 @@ This page is the grouped view instead: every problem appears once, under the mai
 ## Monotonic stack
 
 - [84. Largest Rectangle in Histogram](84-largest-rectangle-in-histogram/)
+- [496. Next Greater Element I](496-next-greater-element-i/)
+- [503. Next Greater Element II](503-next-greater-element-ii/)
 - [739. Daily Temperatures](739-daily-temperatures/)
 - [1475. Final Prices With a Special Discount in a Shop](1475-final-prices-with-a-special-discount-in-a-shop/)
 - [1944. Number of Visible People in a Queue](1944-number-of-visible-people-in-a-queue/)
@@ -324,6 +334,7 @@ This page is the grouped view instead: every problem appears once, under the mai
 
 ## Graph
 
+- [127. Word Ladder](127-word-ladder/)
 - [207. Course Schedule](207-course-schedule/)
 - [210. Course Schedule II](210-course-schedule-ii/)
 - [322. Coin Change](322-coin-change/)
@@ -386,16 +397,21 @@ This page is the grouped view instead: every problem appears once, under the mai
 ## Dynamic programming
 
 - [53. Maximum Subarray](53-maximum-subarray/)
+- [62. Unique Paths](62-unique-paths/)
+- [63. Unique Paths II](63-unique-paths-ii/)
+- [64. Minimum Path Sum](64-minimum-path-sum/)
 - [70. Climbing Stairs](70-climbing-stairs/)
 - [96. Unique Binary Search Trees](96-unique-binary-search-trees/)
 - [118. Pascal's Triangle](118-pascals-triangle/)
 - [119. Pascal's Triangle II](119-pascals-triangle-ii/)
+- [120. Triangle](120-triangle/)
 - [121. Best Time to Buy and Sell Stock](121.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock/)
 - [123. Best Time to Buy and Sell Stock III](123-best-time-to-buy-and-sell-stock-iii/)
 - [139. Word Break](139-word-break/)
 - [152. Maximum Product Subarray](152-maximum-product-subarray/)
 - [188. Best Time to Buy and Sell Stock IV](188-best-time-to-buy-and-sell-stock-iv/)
 - [198. House Robber](198-house-robber/)
+- [213. House Robber II](213-house-robber-ii/)
 - [221. Maximal Square](221-maximal-square/)
 - [337. House Robber III](337-house-robber-iii/)
 - [377. Combination Sum IV](377-combination-sum-iv/)
@@ -454,7 +470,9 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [342. Power of Four](342-power-of-four/)
 - [415. Add Strings](415-add-strings/)
 - [441. Arranging Coins](441-arranging-coins/)
+- [492. Construct the Rectangle](492-construct-the-rectangle/)
 - [504. Base 7](504-base-7/)
+- [507. Perfect Number](507-perfect-number/)
 - [728. Self Dividing Numbers](728-self-dividing-numbers/)
 - [877. Stone Game](877-stone-game/)
 - [989. Add to Array-Form of Integer](989-add-to-array-form-of-integer/)
@@ -499,17 +517,22 @@ This page is the grouped view instead: every problem appears once, under the mai
 - [2073. Time Needed to Buy Tickets](2073-time-needed-to-buy-tickets/)
 - [2293. Min Max Game](2293-min-max-game/)
 - [2525. Categorize Box According to Criteria](2525-categorize-box-according-to-criteria/)
+- [2810. Faulty Keyboard](2810-faulty-keyboard/)
 - [3925. Concatenate Array With Reverse](3925-concatenate-array-with-reverse/)
 
 ## Matrix
 
 - [36. Valid Sudoku](36-valid-sudoku/)
+- [54. Spiral Matrix](54-spiral-matrix/)
+- [59. Spiral Matrix II](59-spiral-matrix-ii/)
 - [419. Battleships in a Board](419-battleships-in-a-board/)
 - [463. Island Perimeter](463-island-perimeter/)
 - [566. Reshape the Matrix](566-reshape-the-matrix/)
+- [661. Image Smoother](661-image-smoother/)
 - [1267. Count Servers that Communicate](1267-count-servers-that-communicate/)
 - [1275. Find Winner on a Tic Tac Toe Game](1275-find-winner-on-a-tic-tac-toe-game/)
 - [2022. Convert 1D Array Into 2D Array](2022-convert-1d-array-into-2d-array/)
+- [2326. Spiral Matrix IV](2326-spiral-matrix-iv/)
 - [3142. Check if Grid Satisfies Conditions](3142-check-if-grid-satisfies-conditions/)
 
 ## Design
